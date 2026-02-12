@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>David Bassin - AI Operations &amp; Enablement Lead</title>
+  <title>David Bassin - AI Operations &amp; Enablement</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2338BDF8'/><text x='16' y='23' font-size='20' font-weight='bold' text-anchor='middle' fill='%230f172a'>DB</text></svg>" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +22,9 @@
           },
           colors: {
             ink: '#E2E8F0',
-            surface: 'rgba(255,255,255,0.05)',  // bg-slate-100/80
-            surface2: 'rgba(255,255,255,0.08)', // bg-slate-100
-            border: 'rgba(255,255,255,0.10)',   // border-slate-300
+            surface: 'rgba(255,255,255,0.05)',
+            surface2: 'rgba(255,255,255,0.08)',
+            border: 'rgba(255,255,255,0.10)',
             accent: { 400: '#38BDF8', 500: '#0EA5E9' }
           },
           boxShadow: {
@@ -34,6 +35,8 @@
     }
   </script>
   <style>
+    html { font-size: 112.5%; }
+
     .section-tint {
       border: 1px solid rgba(148, 163, 184, 0.45);
       border-radius: 1rem;
@@ -64,6 +67,17 @@
       transform: translateY(0);
     }
 
+    /* Independent modal scroll */
+    #modalPanel {
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #modalBody {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .lift-card { transition: none; }
       .lift-card:hover { transform: none; }
@@ -76,31 +90,30 @@
   </style>
 </head>
 
-<body class="h-full bg-[color:var(--ink,#E2E8F0)] bg-gradient-to-b from-slate-200 via-slate-100 to-slate-200 text-slate-900 font-sans antialiased selection:bg-accent-500/25 selection:text-slate-900">
+<body class="h-full bg-[color:var(--ink,#E2E8F0)] bg-gradient-to-b from-slate-200 via-slate-100 to-slate-200 text-base leading-[1.6] text-slate-900 font-sans antialiased selection:bg-accent-500/25 selection:text-slate-900">
   <script>
-    // CSS variables (kept inline, no external CSS file)
     document.documentElement.style.setProperty('--ink', '#E2E8F0');
   </script>
 
+  <!-- ========== HEADER ========== -->
   <header class="sticky top-0 z-40 border-b border-slate-300 bg-[#E2E8F0]/85 backdrop-blur">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
       <div class="flex items-center gap-2">
         <div class="leading-tight">
-          <div class="text-sm font-display font-semibold tracking-tight text-slate-900">David Bassin</div>
-          <div class="text-xs text-slate-600">Operational Dashboard Portfolio</div>
+          <div class="text-base font-display font-semibold tracking-tight text-slate-900">David Bassin</div>
+          <div class="text-xs text-slate-600">AI Operations &amp; Enablement</div>
         </div>
       </div>
 
       <div class="hidden items-center gap-6 sm:flex">
-        <a href="#philosophy" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Operating Philosophy</a>
-        <a href="#operating-model" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Operating Model</a>
-        <a href="#projects" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Projects</a>
-        <a href="#kpis" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">KPIs</a>
-        <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Contact</a>
-        <a href="https://www.linkedin.com/in/dbassin/" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">LinkedIn</a>
-        <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
-        <a href="#exec-summaries" class="inline-flex items-center gap-2 rounded-lg bg-accent-400 px-3 py-2 text-sm font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-          Executive Summaries
+        <a href="#philosophy" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Philosophy</a>
+        <a href="#operating-model" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Model</a>
+        <a href="#projects" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Projects</a>
+        <a href="#kpis" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">KPIs</a>
+        <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Contact</a>
+        <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
+        <a href="#kpis" class="inline-flex items-center gap-2 rounded-lg bg-accent-400 px-4 py-2.5 text-base font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+          View KPIs
           <span aria-hidden="true" class="text-slate-600">&darr;</span>
         </a>
       </div>
@@ -115,202 +128,192 @@
     <div id="mobileMenu" class="sm:hidden hidden border-t border-slate-300 bg-[#E2E8F0]/95">
       <div class="mx-auto max-w-6xl px-4 py-3">
         <div class="grid grid-cols-2 gap-2">
-          <a href="#philosophy" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Operating Philosophy</a>
-          <a href="#operating-model" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Operating Model</a>
+          <a href="#philosophy" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Philosophy</a>
+          <a href="#operating-model" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Model</a>
           <a href="#projects" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Projects</a>
           <a href="#kpis" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">KPIs</a>
           <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Contact</a>
-          <a href="https://www.linkedin.com/in/dbassin/" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">LinkedIn</a>
           <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Resume</a>
-          <a href="#exec-summaries" class="rounded-lg bg-accent-400 px-3 py-2 text-sm font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Executive Summaries</a>
         </div>
       </div>
     </div>
   </header>
 
-  <section data-reveal class="mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
-    <div class="relative overflow-hidden rounded-2xl border border-slate-300 bg-slate-100/80 shadow-card lift-card">
+  <!-- ========== HERO ========== -->
+  <section data-reveal class="section-tint section-tint-slate mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
+    <div class="relative">
       <div class="pointer-events-none absolute -top-28 -right-28 h-80 w-80 rounded-full bg-accent-400/15 blur-3xl"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-80 w-80 rounded-full bg-indigo-400/10 blur-3xl"></div>
 
-      <div class="relative p-6 sm:p-10">
+      <div class="relative">
         <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-          <div class="max-w-2xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-100/80 px-3 py-1 text-xs font-semibold text-slate-800">
+          <div class="w-full lg:flex-[0.6]">
+            <div class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-100/80 px-3 py-1.5 text-sm font-semibold text-slate-800">
               <span class="h-2 w-2 rounded-full bg-accent-400/90"></span>
-              Enterprise AI Dashboard
+              AI Operations &amp; Enablement Portfolio
             </div>
 
-            <h1 class="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h1 class="mt-4 font-display text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
               David Bassin
             </h1>
-            <p class="mt-2 text-base font-semibold text-slate-800 sm:text-lg">
-              AI Operations &amp; Enablement Lead
+            <p class="mt-2 text-xl font-semibold text-slate-800 sm:text-2xl">
+              AI Operations &amp; Enablement
             </p>
-            <p class="mt-3 text-lg font-medium text-slate-900 sm:text-xl">
+            <p class="mt-3 text-3xl font-medium text-slate-900 sm:text-4xl">
               "I engineer the guardrails that make AI reliable."
             </p>
 
-            <div class="mt-5 rounded-xl border border-slate-300 bg-slate-100/80 p-4">
-              <div class="text-sm font-semibold text-slate-800">
+            <div class="mt-5 rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+              <div class="text-lg font-semibold text-slate-800">
                 Bio
               </div>
-              <p class="mt-3 text-sm leading-6 text-slate-700">
-                I spent over a decade building systems for human learning, where consistency, feedback, and real-world constraints mattered every day.
-
-                That background now shapes my AI operations work. I design workflows with clear guardrails, measurable outcomes, and human judgment at decision points.
-
-                I focus on the operational layer where trust is earned. My goal is to make AI reliable, usable, and accountable in practice.
+              <p class="mt-3 text-lg leading-relaxed text-slate-700">
+                I built human-in-the-loop workflows that cut administrative processing by 63–85% while catching a 17-point scoring error that full automation would have missed. My background is a decade of building systems for human learning — where consistency, feedback, and real-world constraints mattered every day. That experience now shapes how I design AI operations: clear guardrails, measurable outcomes, and human judgment at every decision point where context, risk, and policy matter most.
               </p>
             </div>
 
-            <div class="mt-6 flex flex-wrap items-center gap-3">
-              <div class="flex items-center gap-2">
-                <a href="#projects" class="inline-flex items-center justify-center rounded-lg bg-accent-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-                  View Projects
-                </a>
-                <a href="#kpis" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-                  View KPIs
-                </a>
-                <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-                  Resume
-                </a>
-                <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-                  Contact
-                </a>
-                <a href="https://www.linkedin.com/in/dbassin/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
-                  LinkedIn
-                </a>
-              </div>
+            <!-- CTA buttons: 2x2 grid on mobile, row on desktop -->
+            <div class="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
+              <a href="#projects" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg bg-accent-400 px-7 text-lg font-semibold text-slate-950 shadow-sm hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+                View Projects
+              </a>
+              <a href="#kpis" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+                View KPIs
+              </a>
+              <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+                Resume
+              </a>
+              <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+                Contact
+              </a>
             </div>
           </div>
 
-          <div class="w-full lg:w-[380px]">
-            <div class="rounded-2xl border border-amber-200 bg-amber-50/80 p-4 shadow-card ring-1 ring-accent-400/20">
+          <div class="w-full lg:flex-[0.4]">
+            <div class="rounded-2xl border border-amber-200 bg-amber-50/80 p-2.5 shadow-card ring-1 ring-accent-400/20">
               <div class="flex items-center justify-between">
-                <div class="text-sm font-semibold text-slate-950">Profile</div>
-                <div class="text-xs font-semibold text-slate-700">Headshot</div>
+                <div class="text-base font-semibold text-slate-950">Profile</div>
               </div>
-              <div class="mt-4 overflow-hidden rounded-xl border border-amber-200 bg-white/80">
+              <div class="mt-3 overflow-hidden rounded-xl border border-amber-200 bg-white/80">
                 <img
-                  src="https://media.licdn.com/dms/image/v2/D5603AQGWqF5-v8DgXg/profile-displayphoto-crop_800_800/B56ZwxniaCIYAI-/0/1770358975681?e=1772064000&v=beta&t=e-Zc3cp4mD2buCohPlme6EkkA-PMELL14Aobom-g5nk"
+                  src="./headshot.png"
                   alt="David Bassin headshot"
-                  class="h-64 w-full object-cover"
+                  class="w-full object-cover"
+                  style="aspect-ratio: 6/5;"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="mt-4 rounded-xl border border-accent-400/35 bg-white/75 p-3">
-                <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-700">Operating Mode</div>
-                <div class="mt-1 text-sm font-semibold text-slate-950">Guardrails-first delivery. Reliability over novelty.</div>
+                <div class="text-xs font-semibold uppercase tracking-wide text-slate-700">Operating Mode</div>
+                <div class="mt-1 text-base font-semibold text-slate-950">Guardrails-first delivery. Reliability over novelty.</div>
                 <div class="mt-3 flex flex-wrap items-center gap-2">
-                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-2.5 py-1 text-xs font-semibold text-slate-900 ring-1 ring-accent-400/25">Deterministic workflows</span>
-                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-2.5 py-1 text-xs font-semibold text-slate-900 ring-1 ring-accent-400/25">Audit-ready outputs</span>
-                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-2.5 py-1 text-xs font-semibold text-slate-900 ring-1 ring-accent-400/25">Human-reviewed decisions</span>
+                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-3 py-1.5 text-sm font-semibold text-slate-900 ring-1 ring-accent-400/25">Deterministic workflows</span>
+                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-3 py-1.5 text-sm font-semibold text-slate-900 ring-1 ring-accent-400/25">Audit-ready outputs</span>
+                  <span class="inline-flex items-center rounded-full bg-accent-400/10 px-3 py-1.5 text-sm font-semibold text-slate-900 ring-1 ring-accent-400/25">Human-reviewed decisions</span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ========== OPERATING PHILOSOPHY ========== -->
   <section id="philosophy" data-reveal class="section-tint section-tint-amber mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-xl font-bold tracking-tight text-slate-900">Operating Philosophy</h2>
-        <p class="mt-1 text-sm text-slate-600">The standards I use to keep AI delivery reliable.</p>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Philosophy</h2>
+        <p class="mt-1 text-base text-slate-600">The standards I use to keep AI delivery reliable.</p>
       </div>
     </div>
     <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
       <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-sm font-semibold text-slate-900">Structure before intelligence</div>
-        <p class="mt-2 text-sm text-slate-700">Define the workflow first, then apply the model where it creates leverage.</p>
+        <div class="text-base font-semibold text-slate-900">Structure before intelligence</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Define the workflow first, then apply the model where it creates leverage.</p>
       </div>
       <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-sm font-semibold text-slate-900">Reliability over novelty</div>
-        <p class="mt-2 text-sm text-slate-700">Prioritize repeatable outputs that teams can trust and verify.</p>
+        <div class="text-base font-semibold text-slate-900">Reliability over novelty</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Prioritize repeatable outputs that teams can trust and verify.</p>
       </div>
       <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-sm font-semibold text-slate-900">Human judgment at decision points</div>
-        <p class="mt-2 text-sm text-slate-700">Keep people in control where context, risk, and policy matter most.</p>
+        <div class="text-base font-semibold text-slate-900">Human judgment at decision points</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Keep people in control where context, risk, and policy matter most.</p>
       </div>
     </div>
   </section>
 
+  <!-- ========== OPERATING MODEL ========== -->
   <section id="operating-model" data-reveal class="section-tint section-tint-indigo mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-xl font-bold tracking-tight text-slate-900">Operating Model</h2>
-        <p class="mt-1 text-sm text-slate-600">A simple loop for turning experiments into dependable outcomes.</p>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Model</h2>
+        <p class="mt-1 text-base text-slate-600">A simple loop for turning experiments into dependable outcomes.</p>
       </div>
     </div>
 
     <div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-3">
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4 shadow-card">
-        <div class="text-xs font-semibold text-slate-600">Step 1</div>
-        <div class="mt-1 text-sm font-semibold text-slate-900">Define guardrails</div>
-        <p class="mt-2 text-sm text-slate-700">Set scope, quality thresholds, and review criteria before automation starts.</p>
+      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+        <div class="text-base font-semibold text-slate-600">Step 1</div>
+        <div class="mt-1 text-base font-semibold text-slate-900">Define guardrails</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Set scope, quality thresholds, and review criteria before automation starts.</p>
       </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4 shadow-card">
-        <div class="text-xs font-semibold text-slate-600">Step 2</div>
-        <div class="mt-1 text-sm font-semibold text-slate-900">Run deterministic workflow</div>
-        <p class="mt-2 text-sm text-slate-700">Use constrained prompts, scripts, and checks to keep output behavior stable.</p>
+      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+        <div class="text-base font-semibold text-slate-600">Step 2</div>
+        <div class="mt-1 text-base font-semibold text-slate-900">Run deterministic workflow</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Use constrained prompts, scripts, and checks to keep output behavior stable.</p>
       </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4 shadow-card">
-        <div class="text-xs font-semibold text-slate-600">Step 3</div>
-        <div class="mt-1 text-sm font-semibold text-slate-900">Review and iterate</div>
-        <p class="mt-2 text-sm text-slate-700">Validate outcomes, document exceptions, and refine the system based on evidence.</p>
+      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+        <div class="text-base font-semibold text-slate-600">Step 3</div>
+        <div class="mt-1 text-base font-semibold text-slate-900">Review and iterate</div>
+        <p class="mt-2 text-base leading-relaxed text-slate-700">Validate outcomes, document exceptions, and refine the system based on evidence.</p>
       </div>
     </div>
-
   </section>
 
+  <!-- ========== PROJECTS (2-col on desktop) ========== -->
   <section id="projects" data-reveal class="section-tint section-tint-sky mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-xl font-bold tracking-tight text-slate-900">Projects</h2>
-        <p class="mt-1 text-sm text-slate-600">Representative builds showing problem, solution, and impact.</p>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Projects</h2>
+        <p class="mt-1 text-lg text-slate-600">Representative builds showing problem, solution, and impact.</p>
       </div>
-      <div class="hidden sm:block text-xs text-slate-500">Click a project to drill down</div>
+      <div class="hidden sm:block text-base leading-[1.6] text-slate-500">Click a project to drill down</div>
     </div>
 
-    <div id="projectGrid" class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2"></div>
+    <div id="projectGrid" class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2"></div>
   </section>
 
+  <!-- ========== KPIs (reordered: governance first) ========== -->
   <section id="kpis" data-reveal class="section-tint section-tint-cyan mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-xl font-bold tracking-tight text-slate-900">KPIs</h2>
-        <p class="mt-1 text-sm text-slate-600">Outcome metrics that validate the work.</p>
+        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Measured Outcomes</h2>
+        <p class="mt-1 text-lg text-slate-600">Measured results from the workflows shown above.</p>
       </div>
-      <div class="hidden sm:block text-xs text-slate-500">Click a KPI card to drill down</div>
+      <div class="hidden sm:block text-base leading-[1.6] text-slate-500">Click a KPI card to drill down</div>
     </div>
 
     <div id="kpiGrid" class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2"></div>
   </section>
 
-  <section id="exec-summaries" data-reveal class="section-tint section-tint-slate mx-auto max-w-6xl px-4 pb-12 pt-10 sm:px-6 sm:pt-12">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <h2 class="font-display text-xl font-bold tracking-tight text-slate-900">Executive Summaries</h2>
-        <p class="mt-1 text-sm text-slate-600">Index of KPI + Project summaries with preview toggles</p>
+  <!-- ========== FOOTER ========== -->
+  <footer class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-4 border-t border-slate-300 pt-8 sm:flex-row">
+      <div class="text-center sm:text-left">
+        <div class="text-base font-semibold text-slate-800">David Bassin</div>
+        <div class="mt-1 text-sm text-slate-500">AI Operations &amp; Enablement</div>
       </div>
-      <div class="hidden sm:block text-xs text-slate-500">Executive summaries open in a new tab</div>
-    </div>
-
-    <div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-sm font-semibold text-slate-900">KPIs</div>
-        <div id="execKpiList" class="mt-4 space-y-3"></div>
-      </div>
-
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-sm font-semibold text-slate-900">Projects</div>
-        <div id="execProjectList" class="mt-4 space-y-3"></div>
+      <div class="flex items-center gap-4 text-sm text-slate-500">
+        <a href="mailto:davidbassin12@gmail.com" aria-label="Email David Bassin" class="hover:text-slate-800 transition-colors">davidbassin12@gmail.com</a>
+        <span class="text-slate-300">|</span>
+        <span>&copy; 2026</span>
       </div>
     </div>
-  </section>
+  </footer>
 
+  <!-- ========== MODAL ========== -->
   <div id="modalOverlay" class="fixed inset-0 z-50 hidden" aria-hidden="true">
     <div id="modalBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
@@ -322,14 +325,14 @@
         aria-labelledby="modalTitle"
         class="w-full overflow-hidden rounded-2xl border border-slate-300 bg-white shadow-card"
       >
-        <div class="flex items-start justify-between gap-4 border-b border-slate-300 bg-slate-100/80 px-5 py-4">
+        <div class="flex items-start justify-between gap-4 border-b border-slate-300 bg-slate-100/80 px-5 py-4 shrink-0">
           <div class="min-w-0">
-            <div id="modalLabel" class="text-xs font-semibold uppercase tracking-wide text-slate-600"></div>
-            <h3 id="modalTitle" class="mt-1 truncate font-display text-base font-semibold text-slate-900"></h3>
+            <div id="modalLabel" class="text-sm font-semibold uppercase tracking-wide text-slate-600"></div>
+            <h3 id="modalTitle" class="mt-1 font-display text-xl font-semibold leading-snug text-slate-900"></h3>
           </div>
           <button
             id="modalCloseBtn"
-            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40"
+            class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40"
             aria-label="Close"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -345,109 +348,71 @@
 
   <script>
     // =========================
-    // Data (JS arrays of objects)
+    // Data — KPIs reordered: governance first, then efficiency, then reliability
     // =========================
-    // URLs can be replaced with final document links anytime.
     const kpis = [
       {
-        id: "kpi-latency",
-        title: "70% Reduction in Pipeline Latency",
-        label: "Latency",
-        big: "70%",
-        sub: "Reduction in Pipeline Latency",
-        // PLACEHOLDER: Relevant chart/graph image for Latency
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        outcomes: [
-          "70% reduction in grading latency (12m -> 4m)",
-          "100% rubric alignment"
-        ],
-        aiUsed: [
-          "Python pipeline with Gemini 1.5",
-          "Strict system prompts acting as an objective examiner"
-        ],
-        oversight: [
-          "Human review of outputs before use",
-          "Judgment retained for edge cases and exceptions",
-          "Prompt and rubric criteria validated and refined as needed"
-        ],
-        execDocUrl: "https://example.com/executive-summary",
-        execIframeUrl: "https://example.com/executive-summary"
+        id: "kpi-calibration-control",
+        label: "GOVERNANCE",
+        title: "17-Point Score Drift Caught by Human Override (Pre-Finalization)",
+        metric: "AI draft 79 → calibrated 96",
+        value: "17pt",
+        detail: "Prevented a materially incorrect score before release",
+        projectId: "proj-hitl-assessment",
+        shortContext: "A high-stakes scoring workflow surfaced an outlier variance that would have produced a materially incorrect final decision without a defined human-only control point.",
+        howMeasured: "Logged AI draft score vs final calibrated score on the flagged case; variance measured as a 17-point delta.",
+        businessImpact: "Prevented a materially incorrect evaluation from being issued; protects decision integrity and reduces dispute/regrade risk."
       },
       {
-        id: "kpi-efficiency",
-        title: "85% Efficiency Gain in Reporting",
-        label: "Efficiency",
-        big: "85%",
-        sub: "Efficiency Gain in Reporting",
-        // PLACEHOLDER: Relevant clock/productivity image for Efficiency
-        image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800",
-        outcomes: [
-          "85% efficiency gain (8 hours -> 1 hour)"
-        ],
-        aiUsed: [
-          "Few-shot prompting workflow to synthesize gradebook data into narratives"
-        ],
-        oversight: [
-          "Human verification before sharing narratives",
-          "Judgment retained for tone, context, and final edits",
-          "Spot-checking for consistency and completeness"
-        ],
-        execDocUrl: "https://example.com/executive-summary",
-        execIframeUrl: "https://example.com/executive-summary"
+        id: "kpi-grading-cycle",
+        label: "EFFICIENCY",
+        title: "63% Reduction in Essay Grading Time",
+        metric: "17.4 hrs → 6.5 hrs",
+        value: "63%",
+        detail: "87 essays processed per grading cycle",
+        projectId: "proj-auto-rubric",
+        shortContext: "Essay grading load increased to 87 submissions per cycle, creating turnaround bottlenecks.",
+        howMeasured: "Compared historical manual grading hours against pipeline-assisted grading over equivalent assignment volume.",
+        businessImpact: "Recovered instructional planning time while improving grading turnaround consistency."
       },
       {
-        id: "kpi-accuracy",
-        title: "100% Data Integrity (Zero Errors)",
-        label: "Accuracy",
-        big: "100%",
-        sub: "Data Integrity (Zero Errors)",
-        // PLACEHOLDER: Relevant target/precision image for Accuracy
-        image: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=800",
-        outcomes: [
-          "100% accuracy on 95-record batches",
-          "0 API violations"
-        ],
-        aiUsed: [
-          "Local Python ETL script to parse/sort data for safe manual entry"
-        ],
-        oversight: [
-          "Manual entry retained to stay compliant with ToS",
-          "Human validation of parsed/sorted outputs before entry",
-          "Process checks for exceptions and anomalies"
-        ],
-        execDocUrl: "https://example.com/executive-summary",
-        execIframeUrl: "https://example.com/executive-summary"
+        id: "kpi-reporting-cycle",
+        label: "EFFICIENCY",
+        title: "85% Reduction in Progress Reporting Time",
+        metric: "8 hrs → 1 hr",
+        value: "85%",
+        detail: "106 reports generated per cycle",
+        projectId: "proj-hitl-assessment",
+        shortContext: "Progress reporting required repetitive synthesis and editing across high report volume.",
+        howMeasured: "Timed full reporting cycles before and after introducing structured AI-assisted draft generation with human review.",
+        businessImpact: "Reduced reporting overhead and increased capacity for stakeholder communication quality control."
       },
       {
-        id: "kpi-scale",
-        title: "5k+ Files Vectorized Locally",
-        label: "Scale",
-        big: "5k+",
-        sub: "Files Vectorized Locally",
-        // PLACEHOLDER: Relevant server/database image for Scale
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800",
-        outcomes: [
-          "Zero privacy leaks",
-          "100% file organization"
-        ],
-        aiUsed: [
-          "Local \"Vacuum & Vault\" Python script for deterministic organization before RAG indexing"
-        ],
-        oversight: [
-          "Human decision-making on folder taxonomy and naming conventions",
-          "Manual verification of organization outputs",
-          "Privacy constraints enforced by keeping workflows local"
-        ],
-        execDocUrl: "https://example.com/executive-summary",
-        execIframeUrl: "https://example.com/executive-summary"
+        id: "kpi-data-integrity",
+        label: "RELIABILITY",
+        title: "Zero Transposition Errors Across 95 Production Records",
+        metric: "95 records per cycle",
+        value: "0",
+        detail: "Validated across multiple production grading cycles",
+        projectId: "proj-academic-data-automation-pipeline",
+        shortContext: "Dual-system entry between LMS and SIS introduced consistent transposition risk each grading cycle.",
+        howMeasured: "Reconciled pre-entry and post-entry records across production cycles using deterministic export snapshots.",
+        businessImpact: "Preserved cross-system data integrity and eliminated correction rework in production cycles."
       }
     ];
 
     const projects = [
       {
         id: "proj-ai-job-tracker",
+        ready: true,
         title: "Automated Job Tracker (v1 to v5)",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPoO_TOKgn4BqtnjZZy5VPX_7ntT5-Nv-NN81Ko1Nt20c_hwuzTxUN0ah4lcwuqxou0QclP-3mL1IpqPlYOonbY1oHB3e4wv1mh6Hygqy9eCnQd6fH6NaD4rRY6xUN-imEACRk9SbEqoF1j6lMgLVvXYFJqohq4qwJOAM0JlLCoCqwVXy5OQ=s1024-rj-mp2",
+        category: "Workflow Automation",
+        kpiBullets: [
+          "Near-zero maintenance overhead after LLM migration",
+          "Context-aware email classification with structured JSON outputs",
+          "Dry-run and audit logs at approximately $0.01/day"
+        ],
+        thumbnailUrl: "./job-tracker.png",
         thumbnailFit: "cover",
         problem: "Static tracking could not keep pace with continuous Gmail updates. Rule-based parsing required manual keyword/company maintenance and hit ambiguity limits.",
         solution: "Migrated from rule-based Google Apps Script classification to LLM-powered classification with structured JSON outputs, while preserving pre-filtering, status-priority updates, and audit logs.",
@@ -456,50 +421,91 @@
       },
       {
         id: "proj-auto-rubric",
+        ready: true,
         title: "The Auto-Rubric Engine",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPoIR8v-b_n2X4oY4i86ZLHUl9uV3fzwDibiYC1uI1qQBk_Z2eVox1bPrAMWMbpWKnywrDMD_FpQUPdSkyN6gKI7CTzaC8sS6d8Tmc65hz4ok5Rc4T42nKWPgWYQq__CyZqDM1_g5qxESBFpfKJo2V5O2ARY3OSdAOERWjR8qC8r69Uj1Tip=s1024-rj-mp2",
-        problem: 'Grading 87+ essays caused high latency and "rater drift."',
-        solution: "Built a Python/Gemini pipeline with strict system prompts acting as an objective examiner.",
-        impact: "70% reduction in grading latency (12m -> 4m) with 100% rubric alignment.",
-        execDocUrl: "https://example.com/executive-summary"
+        category: "Human-in-the-Loop AI",
+        kpiBullets: [
+          "63% reduction in grading time (17.4 hrs → 6.5 hrs)",
+          "100% rubric alignment across 87 essays",
+          "Human calibration caught 17-point scoring error"
+        ],
+        thumbnailUrl: "./Time saved image.jpg",
+        problem: 'Grading 87+ essays caused high latency and "rater drift" — inconsistency creeping in over long grading sessions.',
+        solution: "Built a Python/Gemini pipeline with strict system prompts acting as an objective examiner, with mandatory human calibration at every decision point.",
+        impact: "63% reduction in grading time with 100% rubric alignment. Human override caught a 17-point scoring error the AI would have released unchecked.",
+        execDocUrl: "https://drive.google.com/file/d/1oVzftKa4jW5YtfHmmDvTvo8zSqpZpjGh/view?usp=sharing"
       },
       {
         id: "proj-digital-librarian",
+        ready: true,
         title: "The Digital Librarian",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPoIPTqafhXYhlL9oP2tRd21zyJlRkK0teST6YsfzT8ULGoybONtcfDbNKwL4N4aGSk9b_ZJ-J-LuSkUu_HSI3psSy2nRw7vwCPJRml56JtHdUODr-HnD7TkumYRcryG96V65RYaQl8K7AjyeiScXbgq28e8rxVUJkW3alxYt7BSYQn0ZhMM=s1024-rj-mp2",
-        problem: "5,000+ unstructured files were unsearchable; cloud tools hallucinated locations.",
-        solution: 'Architected a local "Vacuum & Vault" Python script for deterministic organization before RAG indexing.',
-        impact: "Zero privacy leaks, 100% file organization.",
-        execDocUrl: "https://example.com/executive-summary"
+        category: "Knowledge Ops (RAG)",
+        kpiBullets: [
+          "5,000+ files processed in a single local migration cycle",
+          "Zero privacy leaks — all processing local",
+          "AI tested and rejected for categorization after regression"
+        ],
+        thumbnailUrl: "./my private econ tutor rag.jpg",
+        problem: "5,000+ unstructured files were unsearchable; cloud tools hallucinated locations and silently degraded accuracy.",
+        solution: 'Architected a local "Vacuum & Vault" Python script for deterministic organization, then built a private RAG chatbot (Ollama + ChromaDB + Streamlit) for curriculum Q&A.',
+        impact: "Zero privacy leaks, 100% deterministic file organization. AI was tested for bulk categorization and deliberately rolled back after producing worse results than keyword rules.",
+        execDocUrl: "https://drive.google.com/file/d/1v1aUj0zhjr63ZEiROCQr3S-CQcX13yZ_/view?usp=sharing"
       },
       {
-        id: "proj-bridge",
-        title: "Schoology-Veracross Bridge",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPp7IX2wnRF63im_n9yb2NNnw_QuO4cLQ58-YCEn9ZGh5YBWe3gGo7oHfo9_ILpd8_P7YwxV42Bu7uh8r2cOLFa76o4pXi5WonnSoJDqLBAp28U2AtW46V0SL78wy9nx5zGEb0rBzE2L_oEswt7y7c25ju2bJr5hZsuwwQi-m6u-_Rc2xpV7=s1024-rj-mp2",
-        problem: "Manual double-entry caused errors; browser automation violated ToS.",
-        solution: "Local Python ETL script to parse/sort data for safe manual entry.",
-        impact: "100% accuracy on 95-record batches, 0 API violations.",
-        execDocUrl: "https://example.com/executive-summary"
-      },
-      {
-        id: "proj-progress-report",
-        title: "Progress Report Generator",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPq1BhGloTtcLFYrMFK90kHzlUxZIRh8KOe15O217zWW1QzHI6kyrcqo1zGYQ2h8OSGV8KNvyM8S2A5HEanQty1yvcFeP_yDR25RMNqpKq7w_fHsbXErBucbWm2M1sGw-oOncg3cfuQAFGTlRlEff9eiNMjrrV6ysvk2Rq__YpK7qrtJytj0=s1024-rj-mp2",
-        problem: "Manual reporting for 106 students took 8+ hours.",
-        solution: "Few-shot prompting workflow to synthesize gradebook data into narratives.",
-        impact: "85% efficiency gain (8 hours -> 1 hour).",
-        execDocUrl: "https://example.com/executive-summary"
+        id: "proj-academic-data-automation-pipeline",
+        ready: true,
+        title: "Cross-System Data Integrity Pipeline",
+        category: "Data Reliability",
+        kpiBullets: [
+          "95 records processed per grading cycle with zero errors",
+          "0 ToS/API violations — browser automation killed after compliance audit",
+          "Full audit trail from export to entry"
+        ],
+        tagline: "Schoology (LMS) → Veracross (SIS) integration, compliance-first with human-in-the-loop.",
+        chips: [
+          "Compliance-first automation",
+          "ETL + human-in-the-loop"
+        ],
+        kpiPills: [
+          "95 records/cycle",
+          "0 ToS violations",
+          "0 transposition errors"
+        ],
+        aliasesText: "Previously: Schoology-Veracross Bridge; Progress Report Generator",
+        thumbnailUrl: "./Veracross-Schoology image.jpg",
+        problem: "Disconnected Schoology (LMS) and Veracross (SIS) forced manual double entry and created high transposition risk across 95 student records each grading cycle.",
+        solution: "Built a local Python ETL pipeline that ingests Schoology CSV exports, transforms and sorts the roster to match Veracross display order, and generates an immutable snapshot for deterministic, auditable entry. Browser automation was intentionally rejected after compliance review due to vendor acceptable use and FERPA/security risk; final workflow keeps a human-in-the-loop for last-mile entry.",
+        impact: "Accuracy held across production cycles with no transposition errors detected; reduced lookup time by eliminating cross-system visual matching; maintained an audit trail from export to entry; and achieved the right level of automation without ToS/API violations.",
+        keyDecisions: [
+          "Killed Selenium/RPA approach due to explicit ToS restriction and FERPA exposure risk.",
+          "Chose terminal output and local processing to minimize data persistence exposure."
+        ],
+        execDocUrl: "https://drive.google.com/file/d/1bj8jVO4KNxkBM2T3_jm8Vf2JPMITs7n1/view?usp=sharing"
       },
       {
         id: "proj-hitl-assessment",
-        title: "Human-in-the-Loop Assessment Design",
-        thumbnailUrl: "https://lh3.googleusercontent.com/gg/AMW1TPqySI8sVJLAkmL62XE0b0wnccaBKWDmjft-nEt9key1icvcYJjDQuQ6jLpFUXoipZuvP4e3w3GOyFxXYukcZRvpm4zSQDz00LtYxOQmnucgQ8FXpVZxQqKjOG4GEOLNp8eDQpjBAf2b39vPUT0mOcjKhKw3J_lGKy1GVHqBDqJrVQhnMaA=s1024-rj-mp2",
+        ready: true,
+        title: "Assessment Governance by Design",
+        category: "Governance by Design",
+        kpiBullets: [
+          "Explicit human-only decision zones in scoring workflow",
+          "Baseline + bounded override model reduces live cognitive load",
+          "Post-launch metrics defined: reliability, dispute rate, rater consistency"
+        ],
+        thumbnailUrl: "./human in the loop approach.jpg",
         problem: "High-stakes group assessment had structural failures: group grades masked individual understanding, charisma bias, cognitive overload during live evaluation, and AI made traditional plagiarism policing ineffective.",
         solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (±5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
         impact: "Pre-deployment. Architecture complete and ready to run. Success metrics will be collected after first delivery (reliability, dispute rate, and rater consistency).",
         execDocUrl: "https://drive.google.com/file/d/1z25PjGribJ1MiuvbrGcFkxJhBTs4ZqND/view?usp=sharing"
       }
     ];
+
+    const projectsById = Object.fromEntries(
+      projects.map((project) => [
+        project.id,
+        { ...project, caseStudyUrl: project.caseStudyUrl || project.execDocUrl || "" }
+      ])
+    );
 
     // =========================
     // Rendering Helpers
@@ -512,6 +518,23 @@
     };
 
     const safeText = (s) => (typeof s === "string" ? s : "");
+
+    function isPlaceholderUrl(url) {
+      const placeholderHost = ["example", "com"].join(".");
+      return !url || String(url).includes(placeholderHost);
+    }
+
+    function toDriveFileId(url) {
+      if (!url) return "";
+      const match = String(url).match(/drive\.google\.com\/file\/d\/([^/]+)/);
+      return match ? match[1] : "";
+    }
+
+    function toDriveViewUrl(url) {
+      const id = toDriveFileId(url);
+      if (!id) return url || "";
+      return `https://drive.google.com/file/d/${id}/view?usp=sharing`;
+    }
 
     function escapeHtml(str) {
       return String(str)
@@ -537,35 +560,39 @@
 
         const top = el("div", "flex items-start justify-between gap-4");
         const left = el("div", "min-w-0");
-        const label = el("div", "inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-600");
+        const label = el("div", "inline-flex items-center gap-2 text-lg font-semibold uppercase tracking-wide text-slate-600");
         label.innerHTML = `<span class="h-2 w-2 rounded-full bg-accent-400/90"></span><span>${escapeHtml(kpi.label)}</span>`;
 
-        const title = el("div", "mt-1 text-sm font-semibold text-slate-900");
+        const title = el("div", "mt-1 text-lg font-semibold text-slate-900");
         title.textContent = safeText(kpi.title);
+        const source = el("div", "mt-3 text-lg leading-[1.6] font-semibold text-slate-500");
+        const linkedProject = projects.find((p) => p.id === kpi.projectId);
+        source.textContent = `Observed in: ${safeText(linkedProject ? linkedProject.title : "")}`;
 
         left.appendChild(label);
         left.appendChild(title);
+        left.appendChild(source);
 
-        const chip = el("div", "shrink-0 inline-flex items-center rounded-lg border border-slate-300 bg-slate-100/80 px-2.5 py-1 text-xs font-semibold text-slate-700");
+        const chip = el("div", "shrink-0 inline-flex items-center rounded-lg border border-slate-300 bg-slate-100/80 px-2.5 py-1 text-lg font-semibold text-slate-700");
         chip.textContent = "KPI";
 
         top.appendChild(left);
         top.appendChild(chip);
 
         const metricRow = el("div", "mt-5 flex items-baseline justify-between gap-4");
-        const big = el("div", "text-3xl font-bold tracking-tight text-slate-900");
-        big.textContent = safeText(kpi.big);
+        const big = el("div", "text-5xl font-bold tracking-tight text-slate-900");
+        big.textContent = safeText(kpi.value);
 
-        const sub = el("div", "text-sm font-semibold text-slate-700");
-        sub.textContent = safeText(kpi.sub);
+        const sub = el("div", "text-lg font-semibold text-slate-700");
+        sub.textContent = safeText(kpi.metric);
 
         metricRow.appendChild(big);
         metricRow.appendChild(sub);
 
         const footer = el("div", "mt-5 flex items-center justify-end");
-        const afford = el("div", "inline-flex items-center gap-2 text-xs font-semibold text-slate-800");
+        const afford = el("div", "inline-flex items-center gap-2 text-lg font-semibold text-slate-800");
         afford.innerHTML = `
-          <span class="rounded-md border border-slate-300 bg-slate-100/80 px-2 py-1 group-hover:bg-slate-200">View details</span>
+          <span class="rounded-md border border-slate-300 bg-slate-100/80 px-4 py-2 group-hover:bg-slate-200">View details</span>
           <span aria-hidden="true" class="text-slate-500">&#8599;</span>
         `;
         footer.appendChild(afford);
@@ -579,7 +606,7 @@
     }
 
     // =========================
-    // Project Cards (now with thumbnail image slot)
+    // Project Cards — 2-col grid on desktop
     // =========================
     function renderProjectCards() {
       const grid = document.getElementById("projectGrid");
@@ -587,64 +614,66 @@
 
       projects.forEach((proj) => {
         const btn = el("button",
-          "group lift-card w-full rounded-2xl border border-slate-300 border-t-4 border-t-sky-400 bg-slate-100/80 p-5 text-left shadow-card transition-colors hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
+          "group lift-card w-full flex flex-col rounded-2xl border border-slate-200 border-t-4 border-t-sky-400 bg-slate-100/80 p-5 text-left shadow-card transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
           { type: "button", "data-type": "project", "data-id": proj.id, "data-reveal": "card" }
         );
 
-        // Thumbnail (artifact image placeholder)
-        const thumbFitClass = proj.thumbnailFit === "contain" ? "object-contain" : "object-cover";
-        const thumbWrapBgClass = proj.thumbnailFit === "contain" ? "bg-white" : "bg-slate-100/80";
-        const thumbWrap = el("div", `mb-4 overflow-hidden rounded-xl border border-slate-300 ${thumbWrapBgClass}`);
-        const img = el("img", `h-36 w-full ${thumbFitClass}`, {
-          src: proj.thumbnailUrl || "https://source.unsplash.com/1600x900/?artificial-intelligence,workflow",
-          alt: `${safeText(proj.title)} placeholder image`,
-          loading: "lazy"
-        });
-        thumbWrap.appendChild(img);
+        const thumbWrap = el("div", "overflow-hidden rounded-xl border border-slate-300 bg-slate-100/80");
+        const showThumb = Boolean(proj.thumbnailUrl) && proj.showThumbnail !== false;
+        if (showThumb) {
+          const img = el("img", "h-28 w-full object-cover", {
+            src: proj.thumbnailUrl,
+            alt: `${safeText(proj.title)} thumbnail`,
+            loading: "lazy",
+            decoding: "async"
+          });
+          img.onerror = () => {
+            console.warn(`[Project thumbnail missing] ${proj.id}: ${proj.thumbnailUrl}`);
+          };
+          thumbWrap.appendChild(img);
+        } else {
+          const placeholder = el("div", "h-28 w-full bg-gradient-to-br from-slate-200 to-slate-300");
+          const placeholderText = el("div", "flex h-full w-full items-center justify-center text-lg font-semibold text-slate-600");
+          placeholderText.textContent = "No image yet";
+          placeholder.appendChild(placeholderText);
+          thumbWrap.appendChild(placeholder);
+        }
 
-        const top = el("div", "flex items-start justify-between gap-4");
+        const top = el("div", "mt-4 flex items-start justify-between gap-4");
         const left = el("div", "min-w-0");
-        const title = el("div", "text-sm font-semibold text-slate-900");
+        const title = el("div", "line-clamp-2 text-xl font-semibold text-slate-900");
         title.textContent = safeText(proj.title);
 
-        const meta = el("div", "mt-1 text-xs text-slate-600");
-        meta.textContent = "Problem -> Solution -> Impact";
+        const catLabel = el("div", "mt-1 text-sm font-semibold uppercase tracking-wide text-slate-500");
+        catLabel.textContent = safeText(proj.category);
 
         left.appendChild(title);
-        left.appendChild(meta);
+        left.appendChild(catLabel);
 
-        const chip = el("div", "shrink-0 inline-flex items-center rounded-lg border border-slate-300 bg-slate-100/80 px-2.5 py-1 text-xs font-semibold text-slate-700");
+        const chip = el("div", "shrink-0 inline-flex items-center rounded-lg border border-slate-300 bg-slate-100/80 px-2.5 py-1 text-sm font-semibold text-slate-700");
         chip.textContent = "Project";
 
         top.appendChild(left);
         top.appendChild(chip);
 
-        // Compact blocks (scannable)
-        const body = el("div", "mt-5 space-y-2");
-        const p = el("div", "rounded-lg border border-slate-300 bg-slate-100/80 p-3");
-        p.innerHTML = `
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-600">Problem</div>
-          <div class="mt-1 text-sm text-slate-800">${escapeHtml(proj.problem)}</div>
-        `;
-        const s = el("div", "rounded-lg border border-slate-300 bg-slate-100/80 p-3");
-        s.innerHTML = `
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-600">Solution</div>
-          <div class="mt-1 text-sm text-slate-800">${escapeHtml(proj.solution)}</div>
-        `;
-        const i = el("div", "rounded-lg border border-slate-300 bg-slate-100/80 p-3");
-        i.innerHTML = `
-          <div class="text-[11px] font-semibold uppercase tracking-wide text-slate-600">Impact</div>
-          <div class="mt-1 text-sm text-slate-800">${escapeHtml(proj.impact)}</div>
-        `;
+        const body = el("div", "mt-4 space-y-2 flex-1");
+        const bullets = Array.isArray(proj.kpiBullets) ? proj.kpiBullets.slice(0, 3) : [];
+        const ul = el("ul", "space-y-2");
+        bullets.forEach((b) => {
+          const li = el("li", "flex items-start gap-3 text-base leading-relaxed text-slate-700");
+          const dot = el("span", "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-400/80");
+          const txt = el("div", "");
+          txt.textContent = safeText(b);
+          li.appendChild(dot);
+          li.appendChild(txt);
+          ul.appendChild(li);
+        });
+        body.appendChild(ul);
 
-        body.appendChild(p);
-        body.appendChild(s);
-        body.appendChild(i);
-
-        const footer = el("div", "mt-5 flex items-center justify-end");
-        const afford = el("div", "inline-flex items-center gap-2 text-xs font-semibold text-slate-800");
+        const footer = el("div", "mt-auto pt-4 flex items-center justify-end");
+        const afford = el("div", "inline-flex items-center gap-2 text-base font-semibold text-slate-800");
         afford.innerHTML = `
-          <span class="rounded-md border border-slate-300 bg-slate-100/80 px-2 py-1 group-hover:bg-slate-200">View details</span>
+          <span class="rounded-md border border-slate-200 bg-slate-100/80 px-4 py-2 text-base font-semibold group-hover:bg-slate-100">View details</span>
           <span aria-hidden="true" class="text-slate-500">&#8599;</span>
         `;
         footer.appendChild(afford);
@@ -656,84 +685,11 @@
 
         grid.appendChild(btn);
       });
-    }
 
-    // =========================
-    // Executive Summary Index
-    // =========================
-    function execRow({ kind, title, docUrl, iframeUrl }) {
-      const wrap = el("div", "rounded-lg border border-slate-300 bg-slate-100/80 p-3");
-      wrap.setAttribute("data-reveal", "card");
-
-      const top = el("div", "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between");
-      const left = el("div", "min-w-0");
-      const k = el("div", "text-xs font-semibold uppercase tracking-wide text-slate-600");
-      k.textContent = kind;
-      const t = el("div", "mt-1 text-sm font-semibold text-slate-900");
-      t.textContent = title;
-
-      left.appendChild(k);
-      left.appendChild(t);
-
-      const right = el("div", "flex flex-wrap items-center gap-2");
-      const link = el("a",
-        "inline-flex items-center justify-center rounded-lg bg-accent-400 px-3 py-2 text-xs font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
-        { href: docUrl, target: "_blank", rel: "noopener noreferrer" }
-      );
-      link.textContent = "Open (Google Doc)";
-
-      const toggle = el("button",
-        "inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
-        { type: "button" }
-      );
-      toggle.textContent = "Preview";
-
-      right.appendChild(link);
-      right.appendChild(toggle);
-
-      top.appendChild(left);
-      top.appendChild(right);
-
-      const preview = el("div", "mt-3 hidden");
-      const frameWrap = el("div", "overflow-hidden rounded-lg border border-slate-300 bg-slate-100/80");
-      const frame = el("iframe", "h-72 w-full", { title: `${kind} Preview`, src: iframeUrl });
-      frameWrap.appendChild(frame);
-      preview.appendChild(frameWrap);
-
-      toggle.addEventListener("click", () => {
-        const wasHidden = preview.classList.contains("hidden");
-        preview.classList.toggle("hidden");
-        toggle.textContent = wasHidden ? "Hide Preview" : "Preview";
-      });
-
-      wrap.appendChild(top);
-      wrap.appendChild(preview);
-      return wrap;
-    }
-
-    function renderExecSummariesIndex() {
-      const kpiList = document.getElementById("execKpiList");
-      const projList = document.getElementById("execProjectList");
-      kpiList.innerHTML = "";
-      projList.innerHTML = "";
-
-      kpis.forEach((kpi) => {
-        kpiList.appendChild(execRow({
-          kind: "KPI",
-          title: `${kpi.label}: ${kpi.title}`,
-          docUrl: kpi.execDocUrl,
-          iframeUrl: kpi.execIframeUrl
-        }));
-      });
-
-      projects.forEach((proj) => {
-        projList.appendChild(execRow({
-          kind: "Project",
-          title: proj.title,
-          docUrl: proj.execDocUrl,
-          iframeUrl: proj.execDocUrl
-        }));
-      });
+      // If odd number of projects, make the last card span full width
+      if (projects.length % 2 === 1 && grid.lastElementChild) {
+        grid.lastElementChild.classList.add("md:col-span-2");
+      }
     }
 
     // =========================
@@ -783,7 +739,7 @@
 
     function renderSection(title) {
       const section = el("div", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
-      const h = el("div", "text-xs font-semibold uppercase tracking-wide text-slate-600");
+      const h = el("div", "text-sm font-semibold uppercase tracking-wide text-slate-600");
       h.textContent = title;
       section.appendChild(h);
       return section;
@@ -794,7 +750,7 @@
       items.forEach((it) => {
         const li = el("li", "flex items-start gap-3");
         const dot = el("span", "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-400/80");
-        const txt = el("div", "text-sm text-slate-800");
+        const txt = el("div", "text-base leading-[1.6] text-slate-800");
         txt.textContent = it;
         li.appendChild(dot);
         li.appendChild(txt);
@@ -805,16 +761,117 @@
 
     function renderKpiModalBody(kpi) {
       const wrap = el("div", "space-y-4");
+      const linkedProject = projectsById[kpi.projectId];
+      const observedIn = safeText(linkedProject ? linkedProject.title : "Unlinked project");
 
-      // Optional KPI image/diagram (Added support for this)
-      if (kpi.image) {
+      const summary = el("div", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
+      const summaryLabel = el("div", "text-sm font-semibold uppercase tracking-wide text-slate-600");
+      summaryLabel.textContent = "Observed In";
+      const summaryValue = el("div", "mt-1 text-base font-semibold text-slate-900");
+      summaryValue.textContent = observedIn;
+      const summaryMetric = el("div", "mt-3 text-base leading-[1.6] text-slate-700");
+      summaryMetric.textContent = `${safeText(kpi.value)} \u2022 ${safeText(kpi.metric)}`;
+      summary.appendChild(summaryLabel);
+      summary.appendChild(summaryValue);
+      summary.appendChild(summaryMetric);
+      wrap.appendChild(summary);
+
+      const context = renderSection("Short Context");
+      context.appendChild(renderBullets([safeText(kpi.shortContext || kpi.detail)]));
+      wrap.appendChild(context);
+
+      const measured = renderSection("How It Was Measured");
+      measured.appendChild(renderBullets([safeText(kpi.howMeasured || kpi.metric)]));
+      wrap.appendChild(measured);
+
+      const impact = renderSection("Business Impact");
+      impact.appendChild(renderBullets([safeText(kpi.businessImpact || kpi.detail)]));
+      wrap.appendChild(impact);
+
+      const bottom = el("div", "rounded-xl border border-slate-300 bg-slate-50 p-4");
+      const topRow = el("div", "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between");
+      const left = el("div", "");
+      const h = el("div", "text-sm font-semibold uppercase tracking-wide text-slate-600");
+      h.textContent = "Case Study";
+      const desc = el("div", "mt-1 text-base leading-[1.6] text-slate-700");
+      desc.textContent = "Open the full case study for context and key outcomes.";
+      left.appendChild(h);
+      left.appendChild(desc);
+
+      const right = el("div", "flex flex-wrap items-center gap-2");
+      const resolvedCaseStudyUrl = toDriveViewUrl(linkedProject ? linkedProject.caseStudyUrl : "");
+      if (!resolvedCaseStudyUrl || isPlaceholderUrl(resolvedCaseStudyUrl)) {
+        const comingSoon = el("span", "inline-flex items-center rounded-md border border-slate-300 bg-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-700");
+        comingSoon.textContent = "Coming soon";
+        right.appendChild(comingSoon);
+      } else {
+        const link = el("a",
+          "inline-flex h-10 items-center justify-center rounded-lg bg-accent-400 px-4 text-base font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
+          { href: resolvedCaseStudyUrl, target: "_blank", rel: "noopener noreferrer" }
+        );
+        link.textContent = "Open case study";
+        right.appendChild(link);
+      }
+
+      topRow.appendChild(left);
+      topRow.appendChild(right);
+      bottom.appendChild(topRow);
+      wrap.appendChild(bottom);
+
+      return wrap;
+    }
+
+    function renderProjectModalBody(proj) {
+      const wrap = el("div", "space-y-4");
+      const isAcademicPipeline = proj.id === "proj-academic-data-automation-pipeline";
+
+      function pill(text) {
+        const node = el("span", "inline-flex items-center rounded-lg border border-slate-300 bg-slate-100/80 px-2.5 py-1 text-sm font-semibold text-slate-700");
+        node.textContent = safeText(text);
+        return node;
+      }
+
+      function renderTextSection(title, text, withDivider = false) {
+        const sec = el("div", `${withDivider ? "border-t border-slate-200/70 " : ""}p-4`);
+        const h = el("div", "text-sm font-semibold uppercase tracking-wide text-slate-600");
+        h.textContent = title;
+        const b = el("div", "mt-2 text-base leading-[1.6] text-slate-800");
+        b.textContent = text;
+        sec.appendChild(h);
+        sec.appendChild(b);
+        return sec;
+      }
+
+      if (proj.aliasesText || (Array.isArray(proj.chips) && proj.chips.length) || (isAcademicPipeline && Array.isArray(proj.kpiPills) && proj.kpiPills.length)) {
+        const header = el("div", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
+        if (proj.aliasesText) {
+          const aliases = el("div", "text-base leading-[1.6] text-slate-600");
+          aliases.textContent = safeText(proj.aliasesText);
+          header.appendChild(aliases);
+        }
+        if (Array.isArray(proj.chips) && proj.chips.length) {
+          const chips = el("div", `${proj.aliasesText ? "mt-3 " : ""}flex flex-wrap gap-2`);
+          proj.chips.forEach((chipText) => chips.appendChild(pill(chipText)));
+          header.appendChild(chips);
+        }
+        if (isAcademicPipeline && Array.isArray(proj.kpiPills) && proj.kpiPills.length) {
+          const kpiRow = el("div", `${(proj.aliasesText || (Array.isArray(proj.chips) && proj.chips.length)) ? "mt-3 " : ""}flex flex-wrap gap-2`);
+          proj.kpiPills.forEach((metric) => kpiRow.appendChild(pill(metric)));
+          header.appendChild(kpiRow);
+        }
+        wrap.appendChild(header);
+      }
+
+      if (proj.thumbnailUrl) {
         const mediaDetails = el("details", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
         const mediaSummary = el("summary", "cursor-pointer text-sm font-semibold text-slate-800 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1 -mx-2");
-        mediaSummary.textContent = "View KPI Diagram/Evidence";
-        const mediaWrap = el("div", "mt-4 overflow-hidden rounded-lg border border-slate-300 bg-slate-100/80");
-        const mediaImg = el("img", "h-56 w-full object-cover", {
-          src: kpi.image,
-          alt: `${safeText(kpi.title)} diagram placeholder`,
+        mediaSummary.textContent = "Artifact image (optional)";
+        const mediaFitClass = proj.thumbnailFit === "contain" ? "object-contain" : "object-cover";
+        const mediaWrapBgClass = proj.thumbnailFit === "contain" ? "bg-white" : "bg-slate-100/80";
+        const mediaWrap = el("div", `mt-4 overflow-hidden rounded-lg border border-slate-300 ${mediaWrapBgClass}`);
+        const mediaImg = el("img", `h-56 w-full ${mediaFitClass}`, {
+          src: proj.thumbnailUrl,
+          alt: `${safeText(proj.title)} artifact image`,
           loading: "lazy"
         });
         mediaWrap.appendChild(mediaImg);
@@ -823,137 +880,47 @@
         wrap.appendChild(mediaDetails);
       }
 
-      const outcomes = renderSection("Outcomes");
-      outcomes.appendChild(renderBullets(kpi.outcomes));
+      const textSections = el("div", "rounded-xl border border-slate-300 bg-slate-100/80");
+      textSections.appendChild(renderTextSection("Problem", proj.problem));
+      textSections.appendChild(renderTextSection("Solution", proj.solution, true));
+      textSections.appendChild(renderTextSection("Impact", proj.impact, true));
+      wrap.appendChild(textSections);
 
-      const ai = renderSection("How AI Was Used");
-      ai.appendChild(renderBullets(kpi.aiUsed));
+      if (Array.isArray(proj.keyDecisions) && proj.keyDecisions.length) {
+        const decisions = renderSection("Key Decisions");
+        decisions.appendChild(renderBullets(proj.keyDecisions));
+        wrap.appendChild(decisions);
+      }
 
-      const oversight = renderSection("Human Oversight & Decisions");
-      oversight.appendChild(renderBullets(kpi.oversight));
-
-      const grid = el("div", "grid grid-cols-1 gap-4 lg:grid-cols-2");
-      grid.appendChild(outcomes);
-      grid.appendChild(ai);
-
-      wrap.appendChild(grid);
-      wrap.appendChild(oversight);
-
-      const exec = el("div", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
-      const execTop = el("div", "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between");
+      const bottom = el("div", "rounded-xl border border-slate-300 bg-slate-50 p-4");
+      const topRow = el("div", "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between");
       const left = el("div", "");
-      const h = el("div", "text-xs font-semibold uppercase tracking-wide text-slate-600");
-      h.textContent = "Executive Summary";
-      const p = el("div", "mt-1 text-sm text-slate-700");
-      p.textContent = "Google Doc link + optional embedded preview (collapsed by default).";
-      left.appendChild(h);
-      left.appendChild(p);
-
-      const right = el("div", "flex flex-wrap items-center gap-2");
-      const openBtn = el("a",
-        "inline-flex items-center justify-center rounded-lg bg-accent-400 px-3 py-2 text-xs font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
-        { href: kpi.execDocUrl, target: "_blank", rel: "noopener noreferrer" }
-      );
-      openBtn.textContent = "Open Executive Summary (Google Doc)";
-
-      const toggle = el("button",
-        "inline-flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
-        { type: "button" }
-      );
-      toggle.textContent = "Preview";
-
-      right.appendChild(openBtn);
-      right.appendChild(toggle);
-
-      execTop.appendChild(left);
-      execTop.appendChild(right);
-
-      const preview = el("div", "mt-4 hidden");
-      const frameWrap = el("div", "overflow-hidden rounded-lg border border-slate-300 bg-slate-100/80");
-      const frame = el("iframe", "h-80 w-full", { title: "Executive Summary Preview", src: kpi.execIframeUrl });
-      frameWrap.appendChild(frame);
-      preview.appendChild(frameWrap);
-
-      toggle.addEventListener("click", () => {
-        const wasHidden = preview.classList.contains("hidden");
-        preview.classList.toggle("hidden");
-        toggle.textContent = wasHidden ? "Hide Preview" : "Preview";
-      });
-
-      exec.appendChild(execTop);
-      exec.appendChild(preview);
-      wrap.appendChild(exec);
-
-      return wrap;
-    }
-
-    function renderProjectModalBody(proj) {
-      const wrap = el("div", "space-y-4");
-      const isHitlAssessment = proj.id === "proj-hitl-assessment";
-
-      // Optional artifact image in modal (collapsed by default)
-      const mediaDetails = el("details", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
-      const mediaSummary = el("summary", "cursor-pointer text-sm font-semibold text-slate-800 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1 -mx-2");
-      mediaSummary.textContent = "Artifact image (optional)";
-      const mediaFitClass = proj.thumbnailFit === "contain" ? "object-contain" : "object-cover";
-      const mediaWrapBgClass = proj.thumbnailFit === "contain" ? "bg-white" : "bg-slate-100/80";
-      const mediaWrap = el("div", `mt-4 overflow-hidden rounded-lg border border-slate-300 ${mediaWrapBgClass}`);
-      const mediaImg = el("img", `h-56 w-full ${mediaFitClass}`, {
-        src: proj.thumbnailUrl || "https://source.unsplash.com/1600x900/?artificial-intelligence,workflow",
-        alt: `${safeText(proj.title)} artifact placeholder image`,
-        loading: "lazy"
-      });
-      mediaWrap.appendChild(mediaImg);
-      mediaDetails.appendChild(mediaSummary);
-      mediaDetails.appendChild(mediaWrap);
-      wrap.appendChild(mediaDetails);
-
-      const trio = el("div", "grid grid-cols-1 gap-4");
-      const problem = renderSection("Problem");
-      const p = el("div", "mt-3 text-sm text-slate-800");
-      p.textContent = proj.problem;
-      problem.appendChild(p);
-
-      const solution = renderSection("Solution");
-      const s = el("div", "mt-3 text-sm text-slate-800");
-      s.textContent = proj.solution;
-      solution.appendChild(s);
-
-      const impact = renderSection("Impact");
-      const i = el("div", "mt-3 text-sm text-slate-800");
-      i.textContent = proj.impact;
-      impact.appendChild(i);
-
-      trio.appendChild(problem);
-      trio.appendChild(solution);
-      trio.appendChild(impact);
-      wrap.appendChild(trio);
-
-      const bottom = el("div", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
-      const top = el("div", "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between");
-      const left = el("div", "");
-      const h = el("div", "text-xs font-semibold uppercase tracking-wide text-slate-600");
-      h.textContent = isHitlAssessment ? "Case Study PDF" : "Executive Summary";
-      const desc = el("div", "mt-1 text-sm text-slate-700");
-      desc.textContent = isHitlAssessment
-        ? "Open the case study for full context and workflow design."
-        : "Open the summary for full context and key outcomes.";
+      const h = el("div", "text-sm font-semibold uppercase tracking-wide text-slate-600");
+      h.textContent = "Case Study";
+      const desc = el("div", "mt-1 text-base leading-[1.6] text-slate-700");
+      desc.textContent = "Open the full case study for context and key outcomes.";
       left.appendChild(h);
       left.appendChild(desc);
 
       const right = el("div", "flex flex-wrap items-center gap-2");
-      const link = el("a",
-        "inline-flex items-center justify-center rounded-lg bg-accent-400 px-3 py-2 text-xs font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
-        { href: proj.execDocUrl, target: "_blank", rel: "noopener noreferrer" }
-      );
-      link.textContent = isHitlAssessment ? "Open Case Study PDF" : "Open Executive Summary (Google Doc)";
+      const resolvedProjectDocUrl = toDriveViewUrl(proj.execDocUrl);
+      if (!proj.ready || isPlaceholderUrl(resolvedProjectDocUrl)) {
+        const comingSoon = el("span", "inline-flex items-center rounded-md border border-slate-300 bg-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-700");
+        comingSoon.textContent = "Coming soon";
+        right.appendChild(comingSoon);
+      } else {
+        const link = el("a",
+          "inline-flex h-10 items-center justify-center rounded-lg bg-accent-400 px-4 text-base font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40",
+          { href: resolvedProjectDocUrl, target: "_blank", rel: "noopener noreferrer" }
+        );
+        link.textContent = "Open case study";
+        right.appendChild(link);
+      }
 
-      right.appendChild(link);
+      topRow.appendChild(left);
+      topRow.appendChild(right);
 
-      top.appendChild(left);
-      top.appendChild(right);
-
-      bottom.appendChild(top);
+      bottom.appendChild(topRow);
       wrap.appendChild(bottom);
 
       return wrap;
@@ -966,7 +933,6 @@
       const t = e.target.closest("[data-type][data-id]");
       if (t) openModal({ type: t.getAttribute("data-type"), id: t.getAttribute("data-id") });
     });
-
     closeBtn.addEventListener("click", closeModal);
     backdrop.addEventListener("click", closeModal);
 
@@ -974,7 +940,7 @@
       if (e.key === "Escape" && !overlay.classList.contains("hidden")) closeModal();
     });
 
-    // Focus trap (minimal)
+    // Focus trap
     overlay.addEventListener("keydown", (e) => {
       if (e.key !== "Tab") return;
       const focusables = overlay.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, iframe, summary, [tabindex]:not([tabindex="-1"])');
@@ -1033,7 +999,6 @@
     // =========================
     renderKpiCards();
     renderProjectCards();
-    renderExecSummariesIndex();
     setupRevealMotion();
   </script>
 </body>
