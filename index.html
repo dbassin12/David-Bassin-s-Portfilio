@@ -168,7 +168,7 @@
                 Bio
               </div>
               <p class="mt-3 text-lg leading-relaxed text-slate-700">
-                I built human-in-the-loop workflows that cut administrative processing by 63�85% while catching a 17-point scoring error that full automation would have missed. My background is a decade of building systems for human learning � where consistency, feedback, and real-world constraints mattered every day. That experience now shapes how I design AI operations: clear guardrails, measurable outcomes, and human judgment at every decision point where context, risk, and policy matter most.
+                I built human-in-the-loop workflows that cut administrative processing by 63-85% while catching a 17-point scoring error that full automation would have missed. My background is a decade of building systems for human learning where consistency, feedback, and real-world constraints mattered every day. That experience now shapes how I design AI operations: clear guardrails, measurable outcomes, and human judgment at every decision point where context, risk, and policy matter most.
               </p>
             </div>
 
@@ -348,14 +348,14 @@
 
   <script>
     // =========================
-    // Data � KPIs reordered: governance first, then efficiency, then reliability
+    // Data - KPIs reordered: governance first, then efficiency, then reliability
     // =========================
     const kpis = [
       {
         id: "kpi-calibration-control",
         label: "GOVERNANCE",
         title: "17-Point Score Drift Caught by Human Override (Pre-Finalization)",
-        metric: "AI draft 79 ? calibrated 96",
+        metric: "AI draft 79 -> calibrated 96",
         value: "17pt",
         detail: "Prevented a materially incorrect score before release",
         projectId: "proj-hitl-assessment",
@@ -367,7 +367,7 @@
         id: "kpi-grading-cycle",
         label: "EFFICIENCY",
         title: "63% Reduction in Essay Grading Time",
-        metric: "17.4 hrs ? 6.5 hrs",
+        metric: "17.4 hrs -> 6.5 hrs",
         value: "63%",
         detail: "87 essays processed per grading cycle",
         projectId: "proj-auto-rubric",
@@ -379,7 +379,7 @@
         id: "kpi-reporting-cycle",
         label: "EFFICIENCY",
         title: "85% Reduction in Progress Reporting Time",
-        metric: "8 hrs ? 1 hr",
+        metric: "8 hrs -> 1 hr",
         value: "85%",
         detail: "106 reports generated per cycle",
         projectId: "proj-hitl-assessment",
@@ -412,7 +412,7 @@
           "Context-aware email classification with structured JSON outputs",
           "Dry-run and audit logs at approximately $0.01/day"
         ],
-        thumbnailUrl: "./job-tracker.png",
+        thumbnailUrl: "./auto job updater.jpg",
         thumbnailFit: "cover",
         problem: "Static tracking could not keep pace with continuous Gmail updates. Rule-based parsing required manual keyword/company maintenance and hit ambiguity limits.",
         solution: "Migrated from rule-based Google Apps Script classification to LLM-powered classification with structured JSON outputs, while preserving pre-filtering, status-priority updates, and audit logs.",
@@ -430,7 +430,7 @@
           "Human calibration caught 17-point scoring error"
         ],
         thumbnailUrl: "./Time saved image.jpg",
-        problem: 'Grading 87+ essays caused high latency and "rater drift" � inconsistency creeping in over long grading sessions.',
+        problem: 'Grading 87+ essays caused high latency and "rater drift" - inconsistency creeping in over long grading sessions.',
         solution: "Built a Python/Gemini pipeline with strict system prompts acting as an objective examiner, with mandatory human calibration at every decision point.",
         impact: "63% reduction in grading time with 100% rubric alignment. Human override caught a 17-point scoring error the AI would have released unchecked.",
         execDocUrl: "https://drive.google.com/file/d/1oVzftKa4jW5YtfHmmDvTvo8zSqpZpjGh/view?usp=sharing"
@@ -442,7 +442,7 @@
         category: "Knowledge Ops (RAG)",
         kpiBullets: [
           "5,000+ files processed in a single local migration cycle",
-          "Zero privacy leaks � all processing local",
+          "Zero privacy leaks - all processing local",
           "AI tested and rejected for categorization after regression"
         ],
         thumbnailUrl: "./my private econ tutor rag.jpg",
@@ -458,10 +458,10 @@
         category: "Data Reliability",
         kpiBullets: [
           "95 records processed per grading cycle with zero errors",
-          "0 ToS/API violations � browser automation killed after compliance audit",
+          "0 ToS/API violations - browser automation killed after compliance audit",
           "Full audit trail from export to entry"
         ],
-        tagline: "Schoology (LMS) ? Veracross (SIS) integration, compliance-first with human-in-the-loop.",
+        tagline: "Schoology (LMS) -> Veracross (SIS) integration, compliance-first with human-in-the-loop.",
         chips: [
           "Compliance-first automation",
           "ETL + human-in-the-loop"
@@ -494,7 +494,7 @@
         ],
         thumbnailUrl: "./human in the loop approach.jpg",
         problem: "High-stakes group assessment had structural failures: group grades masked individual understanding, charisma bias, cognitive overload during live evaluation, and AI made traditional plagiarism policing ineffective.",
-        solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (�5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
+        solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (+/-5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
         impact: "Pre-deployment. Architecture complete and ready to run. Success metrics will be collected after first delivery (reliability, dispute rate, and rater consistency).",
         execDocUrl: "https://drive.google.com/file/d/1z25PjGribJ1MiuvbrGcFkxJhBTs4ZqND/view?usp=sharing"
       }
@@ -606,7 +606,7 @@
     }
 
     // =========================
-    // Project Cards � 2-col grid on desktop
+    // Project Cards - 2-col grid on desktop
     // =========================
     function renderProjectCards() {
       const grid = document.getElementById("projectGrid");
@@ -629,6 +629,7 @@
           });
           img.onerror = () => {
             console.warn(`[Project thumbnail missing] ${proj.id}: ${proj.thumbnailUrl}`);
+            console.log("Missing image src:", proj.thumbnailUrl);
           };
           thumbWrap.appendChild(img);
         } else {
