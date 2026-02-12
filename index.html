@@ -35,12 +35,16 @@
     }
   </script>
   <style>
-    html { font-size: 112.5%; }
+    html { font-size: 100%; }
+    @media (min-width: 640px) { html { font-size: 112.5%; } }
 
     .section-tint {
       border: 1px solid rgba(148, 163, 184, 0.45);
       border-radius: 1rem;
-      padding: 1.25rem;
+      padding: 0.75rem;
+    }
+    @media (min-width: 640px) {
+      .section-tint { padding: 1.25rem; }
     }
     .section-tint-sky { background: linear-gradient(135deg, rgba(186, 230, 253, 0.28), rgba(241, 245, 249, 0.75)); }
     .section-tint-cyan { background: linear-gradient(135deg, rgba(165, 243, 252, 0.22), rgba(241, 245, 249, 0.75)); }
@@ -111,7 +115,7 @@
         <a href="#projects" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Projects</a>
         <a href="#kpis" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">KPIs</a>
         <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Contact</a>
-        <a href="https://docs.google.com/document/d/1sUjQCmzor28uOgBydsSYyZV23NUUdL2V/edit?usp=sharing&ouid=108450998978584059088&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
+        <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
         <a href="#kpis" class="inline-flex items-center gap-2 rounded-lg bg-accent-400 px-4 py-2.5 text-base font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
           View KPIs
           <span aria-hidden="true" class="text-slate-600">&darr;</span>
@@ -133,14 +137,14 @@
           <a href="#projects" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Projects</a>
           <a href="#kpis" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">KPIs</a>
           <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Contact</a>
-          <a href="https://docs.google.com/document/d/1sUjQCmzor28uOgBydsSYyZV23NUUdL2V/edit?usp=sharing&ouid=108450998978584059088&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Resume</a>
+          <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Resume</a>
         </div>
       </div>
     </div>
   </header>
 
   <!-- ========== HERO ========== -->
-  <section data-reveal class="section-tint section-tint-slate mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
+  <section data-reveal class="section-tint section-tint-slate mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-12">
     <div class="relative">
       <div class="pointer-events-none absolute -top-28 -right-28 h-80 w-80 rounded-full bg-accent-400/15 blur-3xl"></div>
       <div class="pointer-events-none absolute -bottom-28 -left-28 h-80 w-80 rounded-full bg-indigo-400/10 blur-3xl"></div>
@@ -153,13 +157,13 @@
               AI Operations &amp; Enablement Portfolio
             </div>
 
-            <h1 class="mt-4 font-display text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+            <h1 class="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-5xl md:text-6xl">
               David Bassin
             </h1>
-            <p class="mt-2 text-xl font-semibold text-slate-800 sm:text-2xl">
+            <p class="mt-1 text-lg font-semibold text-slate-800 sm:mt-2 sm:text-xl md:text-2xl">
               AI Operations &amp; Enablement
             </p>
-            <p class="mt-3 text-3xl font-medium text-slate-900 sm:text-4xl">
+            <p class="mt-2 text-xl font-medium text-slate-900 sm:mt-3 sm:text-3xl md:text-4xl">
               "I engineer the guardrails that make AI reliable."
             </p>
 
@@ -167,29 +171,29 @@
               <div class="text-lg font-semibold text-slate-800">
                 Bio
               </div>
-              <p class="mt-3 text-lg leading-relaxed text-slate-700">
-                I built human-in-the-loop workflows that cut administrative processing by 63-85% while catching a 17-point scoring error that full automation would have missed. My background is a decade of building systems for human learning where consistency, feedback, and real-world constraints mattered every day. That experience now shapes how I design AI operations: clear guardrails, measurable outcomes, and human judgment at every decision point where context, risk, and policy matter most.
+              <p class="mt-2 text-sm leading-relaxed text-slate-700 sm:mt-3 sm:text-lg">
+                I built human-in-the-loop workflows that cut administrative processing by 63–85% while catching a 17-point scoring error that full automation would have missed. My background is a decade of building systems for human learning — where consistency, feedback, and real-world constraints mattered every day. That experience now shapes how I design AI operations: clear guardrails, measurable outcomes, and human judgment at every decision point where context, risk, and policy matter most.
               </p>
             </div>
 
             <!-- CTA buttons: 2x2 grid on mobile, row on desktop -->
-            <div class="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
-              <a href="#projects" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg bg-accent-400 px-7 text-lg font-semibold text-slate-950 shadow-sm hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+            <div class="mt-4 grid grid-cols-2 gap-2 sm:mt-6 sm:gap-3 sm:flex sm:flex-wrap sm:items-center">
+              <a href="#projects" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg bg-accent-400 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-950 shadow-sm hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 View Projects
               </a>
-              <a href="#kpis" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+              <a href="#kpis" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 View KPIs
               </a>
-              <a href="https://docs.google.com/document/d/1sUjQCmzor28uOgBydsSYyZV23NUUdL2V/edit?usp=sharing&ouid=108450998978584059088&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+              <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 Resume
               </a>
-              <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="inline-flex h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-7 text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+              <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 Contact
               </a>
             </div>
           </div>
 
-          <div class="w-full lg:flex-[0.4]">
+          <div class="hidden lg:block w-full lg:flex-[0.4]">
             <div class="rounded-2xl border border-amber-200 bg-amber-50/80 p-2.5 shadow-card ring-1 ring-accent-400/20">
               <div class="flex items-center justify-between">
                 <div class="text-base font-semibold text-slate-950">Profile</div>
@@ -221,63 +225,113 @@
   </section>
 
   <!-- ========== OPERATING PHILOSOPHY ========== -->
-  <section id="philosophy" data-reveal class="section-tint section-tint-amber mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Philosophy</h2>
-        <p class="mt-1 text-base text-slate-600">The standards I use to keep AI delivery reliable.</p>
+  <section id="philosophy" data-reveal class="section-tint section-tint-amber mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-12">
+    <!-- Desktop: always visible -->
+    <div class="hidden sm:block">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Philosophy</h2>
+          <p class="mt-1 text-base text-slate-600">The standards I use to keep AI delivery reliable.</p>
+        </div>
+      </div>
+      <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-900">Structure before intelligence</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Define the workflow first, then apply the model where it creates leverage.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-900">Reliability over novelty</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Prioritize repeatable outputs that teams can trust and verify.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-900">Human judgment at decision points</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Keep people in control where context, risk, and policy matter most.</p>
+        </div>
       </div>
     </div>
-    <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-900">Structure before intelligence</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Define the workflow first, then apply the model where it creates leverage.</p>
+    <!-- Mobile: collapsible -->
+    <details class="sm:hidden">
+      <summary class="cursor-pointer font-display text-2xl font-bold tracking-tight text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md">
+        Operating Philosophy
+        <span class="ml-2 text-base text-slate-500">&#9662;</span>
+      </summary>
+      <div class="mt-3 space-y-3">
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-sm font-semibold text-slate-900">Structure before intelligence</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Define the workflow first, then apply the model where it creates leverage.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-sm font-semibold text-slate-900">Reliability over novelty</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Prioritize repeatable outputs that teams can trust and verify.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-sm font-semibold text-slate-900">Human judgment at decision points</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Keep people in control where context, risk, and policy matter most.</p>
+        </div>
       </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-900">Reliability over novelty</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Prioritize repeatable outputs that teams can trust and verify.</p>
-      </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-900">Human judgment at decision points</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Keep people in control where context, risk, and policy matter most.</p>
-      </div>
-    </div>
+    </details>
   </section>
 
   <!-- ========== OPERATING MODEL ========== -->
-  <section id="operating-model" data-reveal class="section-tint section-tint-indigo mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Model</h2>
-        <p class="mt-1 text-base text-slate-600">A simple loop for turning experiments into dependable outcomes.</p>
+  <section id="operating-model" data-reveal class="section-tint section-tint-indigo mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-12">
+    <!-- Desktop: always visible -->
+    <div class="hidden sm:block">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Operating Model</h2>
+          <p class="mt-1 text-base text-slate-600">A simple loop for turning experiments into dependable outcomes.</p>
+        </div>
+      </div>
+      <div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-600">Step 1</div>
+          <div class="mt-1 text-base font-semibold text-slate-900">Define guardrails</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Set scope, quality thresholds, and review criteria before automation starts.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-600">Step 2</div>
+          <div class="mt-1 text-base font-semibold text-slate-900">Run deterministic workflow</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Use constrained prompts, scripts, and checks to keep output behavior stable.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
+          <div class="text-base font-semibold text-slate-600">Step 3</div>
+          <div class="mt-1 text-base font-semibold text-slate-900">Review and iterate</div>
+          <p class="mt-2 text-base leading-relaxed text-slate-700">Validate outcomes, document exceptions, and refine the system based on evidence.</p>
+        </div>
       </div>
     </div>
-
-    <div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-3">
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-600">Step 1</div>
-        <div class="mt-1 text-base font-semibold text-slate-900">Define guardrails</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Set scope, quality thresholds, and review criteria before automation starts.</p>
+    <!-- Mobile: collapsible -->
+    <details class="sm:hidden">
+      <summary class="cursor-pointer font-display text-2xl font-bold tracking-tight text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md">
+        Operating Model
+        <span class="ml-2 text-base text-slate-500">&#9662;</span>
+      </summary>
+      <div class="mt-3 space-y-3">
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-xs font-semibold text-slate-600">Step 1</div>
+          <div class="mt-1 text-sm font-semibold text-slate-900">Define guardrails</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Set scope, quality thresholds, and review criteria before automation starts.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-xs font-semibold text-slate-600">Step 2</div>
+          <div class="mt-1 text-sm font-semibold text-slate-900">Run deterministic workflow</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Use constrained prompts, scripts, and checks to keep output behavior stable.</p>
+        </div>
+        <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-4">
+          <div class="text-xs font-semibold text-slate-600">Step 3</div>
+          <div class="mt-1 text-sm font-semibold text-slate-900">Review and iterate</div>
+          <p class="mt-1 text-sm leading-relaxed text-slate-700">Validate outcomes, document exceptions, and refine the system based on evidence.</p>
+        </div>
       </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-600">Step 2</div>
-        <div class="mt-1 text-base font-semibold text-slate-900">Run deterministic workflow</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Use constrained prompts, scripts, and checks to keep output behavior stable.</p>
-      </div>
-      <div class="rounded-xl border border-slate-300 bg-slate-100/80 p-5 shadow-card">
-        <div class="text-base font-semibold text-slate-600">Step 3</div>
-        <div class="mt-1 text-base font-semibold text-slate-900">Review and iterate</div>
-        <p class="mt-2 text-base leading-relaxed text-slate-700">Validate outcomes, document exceptions, and refine the system based on evidence.</p>
-      </div>
-    </div>
+    </details>
   </section>
 
   <!-- ========== PROJECTS (2-col on desktop) ========== -->
-  <section id="projects" data-reveal class="section-tint section-tint-sky mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
+  <section id="projects" data-reveal class="section-tint section-tint-sky mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Projects</h2>
-        <p class="mt-1 text-lg text-slate-600">Representative builds showing problem, solution, and impact.</p>
+        <h2 class="font-display text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">Projects</h2>
+        <p class="mt-1 text-sm sm:text-lg text-slate-600">Representative builds showing problem, solution, and impact.</p>
       </div>
       <div class="hidden sm:block text-base leading-[1.6] text-slate-500">Click a project to drill down</div>
     </div>
@@ -286,11 +340,11 @@
   </section>
 
   <!-- ========== KPIs (reordered: governance first) ========== -->
-  <section id="kpis" data-reveal class="section-tint section-tint-cyan mx-auto max-w-6xl px-4 pt-10 sm:px-6 sm:pt-12">
+  <section id="kpis" data-reveal class="section-tint section-tint-cyan mx-auto max-w-6xl px-4 pt-6 sm:px-6 sm:pt-12">
     <div class="flex items-end justify-between gap-4">
       <div>
-        <h2 class="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Measured Outcomes</h2>
-        <p class="mt-1 text-lg text-slate-600">Measured results from the workflows shown above.</p>
+        <h2 class="font-display text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">Measured Outcomes</h2>
+        <p class="mt-1 text-sm sm:text-lg text-slate-600">Measured results from the workflows shown above.</p>
       </div>
       <div class="hidden sm:block text-base leading-[1.6] text-slate-500">Click a KPI card to drill down</div>
     </div>
@@ -307,6 +361,8 @@
       </div>
       <div class="flex items-center gap-4 text-sm text-slate-500">
         <a href="mailto:davidbassin12@gmail.com" aria-label="Email David Bassin" class="hover:text-slate-800 transition-colors">davidbassin12@gmail.com</a>
+        <span class="text-slate-300">|</span>
+        <a href="tel:+13478933538" aria-label="Call David Bassin" class="hover:text-slate-800 transition-colors">347-893-3538</a>
         <span class="text-slate-300">|</span>
         <span>&copy; 2026</span>
       </div>
@@ -348,14 +404,14 @@
 
   <script>
     // =========================
-    // Data - KPIs reordered: governance first, then efficiency, then reliability
+    // Data — KPIs reordered: governance first, then efficiency, then reliability
     // =========================
     const kpis = [
       {
         id: "kpi-calibration-control",
         label: "GOVERNANCE",
         title: "17-Point Score Drift Caught by Human Override (Pre-Finalization)",
-        metric: "AI draft 79 -> calibrated 96",
+        metric: "AI draft 79 → calibrated 96",
         value: "17pt",
         detail: "Prevented a materially incorrect score before release",
         projectId: "proj-hitl-assessment",
@@ -367,7 +423,7 @@
         id: "kpi-grading-cycle",
         label: "EFFICIENCY",
         title: "63% Reduction in Essay Grading Time",
-        metric: "17.4 hrs -> 6.5 hrs",
+        metric: "17.4 hrs → 6.5 hrs",
         value: "63%",
         detail: "87 essays processed per grading cycle",
         projectId: "proj-auto-rubric",
@@ -379,7 +435,7 @@
         id: "kpi-reporting-cycle",
         label: "EFFICIENCY",
         title: "85% Reduction in Progress Reporting Time",
-        metric: "8 hrs -> 1 hr",
+        metric: "8 hrs → 1 hr",
         value: "85%",
         detail: "106 reports generated per cycle",
         projectId: "proj-hitl-assessment",
@@ -412,7 +468,7 @@
           "Context-aware email classification with structured JSON outputs",
           "Dry-run and audit logs at approximately $0.01/day"
         ],
-        thumbnailUrl: "./auto job updater.jpg",
+        thumbnailUrl: "./job-tracker.png",
         thumbnailFit: "cover",
         problem: "Static tracking could not keep pace with continuous Gmail updates. Rule-based parsing required manual keyword/company maintenance and hit ambiguity limits.",
         solution: "Migrated from rule-based Google Apps Script classification to LLM-powered classification with structured JSON outputs, while preserving pre-filtering, status-priority updates, and audit logs.",
@@ -425,12 +481,12 @@
         title: "The Auto-Rubric Engine",
         category: "Human-in-the-Loop AI",
         kpiBullets: [
-          "63% reduction in grading time (17.4 hrs ? 6.5 hrs)",
+          "63% reduction in grading time (17.4 hrs → 6.5 hrs)",
           "100% rubric alignment across 87 essays",
           "Human calibration caught 17-point scoring error"
         ],
         thumbnailUrl: "./Time saved image.jpg",
-        problem: 'Grading 87+ essays caused high latency and "rater drift" - inconsistency creeping in over long grading sessions.',
+        problem: 'Grading 87+ essays caused high latency and "rater drift" — inconsistency creeping in over long grading sessions.',
         solution: "Built a Python/Gemini pipeline with strict system prompts acting as an objective examiner, with mandatory human calibration at every decision point.",
         impact: "63% reduction in grading time with 100% rubric alignment. Human override caught a 17-point scoring error the AI would have released unchecked.",
         execDocUrl: "https://drive.google.com/file/d/1oVzftKa4jW5YtfHmmDvTvo8zSqpZpjGh/view?usp=sharing"
@@ -442,7 +498,7 @@
         category: "Knowledge Ops (RAG)",
         kpiBullets: [
           "5,000+ files processed in a single local migration cycle",
-          "Zero privacy leaks - all processing local",
+          "Zero privacy leaks — all processing local",
           "AI tested and rejected for categorization after regression"
         ],
         thumbnailUrl: "./my private econ tutor rag.jpg",
@@ -458,10 +514,10 @@
         category: "Data Reliability",
         kpiBullets: [
           "95 records processed per grading cycle with zero errors",
-          "0 ToS/API violations - browser automation killed after compliance audit",
+          "0 ToS/API violations — browser automation killed after compliance audit",
           "Full audit trail from export to entry"
         ],
-        tagline: "Schoology (LMS) -> Veracross (SIS) integration, compliance-first with human-in-the-loop.",
+        tagline: "Schoology (LMS) → Veracross (SIS) integration, compliance-first with human-in-the-loop.",
         chips: [
           "Compliance-first automation",
           "ETL + human-in-the-loop"
@@ -494,7 +550,7 @@
         ],
         thumbnailUrl: "./human in the loop approach.jpg",
         problem: "High-stakes group assessment had structural failures: group grades masked individual understanding, charisma bias, cognitive overload during live evaluation, and AI made traditional plagiarism policing ineffective.",
-        solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (+/-5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
+        solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (±5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
         impact: "Pre-deployment. Architecture complete and ready to run. Success metrics will be collected after first delivery (reliability, dispute rate, and rater consistency).",
         execDocUrl: "https://drive.google.com/file/d/1z25PjGribJ1MiuvbrGcFkxJhBTs4ZqND/view?usp=sharing"
       }
@@ -606,7 +662,7 @@
     }
 
     // =========================
-    // Project Cards - 2-col grid on desktop
+    // Project Cards — 2-col grid on desktop
     // =========================
     function renderProjectCards() {
       const grid = document.getElementById("projectGrid");
@@ -629,7 +685,6 @@
           });
           img.onerror = () => {
             console.warn(`[Project thumbnail missing] ${proj.id}: ${proj.thumbnailUrl}`);
-            console.log("Missing image src:", proj.thumbnailUrl);
           };
           thumbWrap.appendChild(img);
         } else {
