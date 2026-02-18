@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="h-full scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -82,6 +82,13 @@
       -webkit-overflow-scrolling: touch;
     }
 
+    /* Project thumbnail SVG illustrations */
+    .project-thumb-svg {
+      width: 100%;
+      height: 112px;
+      display: block;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .lift-card { transition: none; }
       .lift-card:hover { transform: none; }
@@ -115,7 +122,7 @@
         <a href="#projects" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Projects</a>
         <a href="#kpis" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">KPIs</a>
         <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Contact</a>
-        <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
+        <a href="https://drive.google.com/file/d/12lBxIXPyNOQuT8r0odi0hVu6tMASXjBQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="text-base text-slate-700 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1">Resume</a>
         <a href="#kpis" class="inline-flex items-center gap-2 rounded-lg bg-accent-400 px-4 py-2.5 text-base font-semibold text-slate-950 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
           View KPIs
           <span aria-hidden="true" class="text-slate-600">&darr;</span>
@@ -137,7 +144,7 @@
           <a href="#projects" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Projects</a>
           <a href="#kpis" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">KPIs</a>
           <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Contact</a>
-          <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Resume</a>
+          <a href="https://drive.google.com/file/d/12lBxIXPyNOQuT8r0odi0hVu6tMASXjBQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-slate-300 bg-slate-100/80 px-3 py-2 text-sm text-slate-800 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">Resume</a>
         </div>
       </div>
     </div>
@@ -193,7 +200,7 @@
               <a href="#kpis" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 View KPIs
               </a>
-              <a href="https://drive.google.com/file/d/12Iy5EvMNNfCw6dNKQGO7RP75iixkFDA2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
+              <a href="https://drive.google.com/file/d/12lBxIXPyNOQuT8r0odi0hVu6tMASXjBQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View resume (opens in new tab)" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
                 Resume
               </a>
               <a href="mailto:davidbassin12@gmail.com?subject=Portfolio%20Inquiry" aria-label="Send email to David Bassin" class="inline-flex h-11 sm:h-14 items-center justify-center whitespace-nowrap rounded-lg border border-slate-300 bg-slate-100/80 px-5 sm:px-7 text-sm sm:text-lg font-semibold text-slate-900 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-400/40">
@@ -411,6 +418,229 @@
 
   <script>
     // =========================
+    // Inline SVG Illustrations for Project Cards
+    // Each is a clean, abstract, professional graphic
+    // =========================
+    const projectSvgs = {
+      // Job Tracker: envelope/inbox + gear automation motif
+      "proj-ai-job-tracker": `<svg viewBox="0 0 480 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="project-thumb-svg">
+        <defs>
+          <linearGradient id="jt-bg" x1="0" y1="0" x2="480" y2="112" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#1e293b"/>
+          </linearGradient>
+          <linearGradient id="jt-acc" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#38BDF8"/>
+            <stop offset="1" stop-color="#0EA5E9"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="112" fill="url(#jt-bg)"/>
+        <!-- Grid pattern -->
+        <line x1="60" y1="0" x2="60" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="120" y1="0" x2="120" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="180" y1="0" x2="180" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="240" y1="0" x2="240" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="300" y1="0" x2="300" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="360" y1="0" x2="360" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <line x1="420" y1="0" x2="420" y2="112" stroke="#334155" stroke-width="0.5"/>
+        <!-- Envelope icon -->
+        <rect x="60" y="28" width="56" height="40" rx="4" stroke="#38BDF8" stroke-width="2" fill="none"/>
+        <path d="M60 32l28 20 28-20" stroke="#38BDF8" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Arrow flow -->
+        <line x1="130" y1="48" x2="170" y2="48" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="170,44 178,48 170,52" fill="#475569"/>
+        <!-- Gear icon -->
+        <circle cx="210" cy="48" r="16" stroke="#0EA5E9" stroke-width="2" fill="none"/>
+        <circle cx="210" cy="48" r="6" fill="#0EA5E9" opacity="0.3"/>
+        <line x1="210" y1="28" x2="210" y2="34" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+        <line x1="210" y1="62" x2="210" y2="68" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+        <line x1="190" y1="48" x2="196" y2="48" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+        <line x1="224" y1="48" x2="230" y2="48" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+        <!-- Arrow flow -->
+        <line x1="240" y1="48" x2="280" y2="48" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="280,44 288,48 280,52" fill="#475569"/>
+        <!-- Spreadsheet/list icon -->
+        <rect x="300" y="28" width="56" height="40" rx="4" stroke="#38BDF8" stroke-width="2" fill="none"/>
+        <line x1="300" y1="42" x2="356" y2="42" stroke="#38BDF8" stroke-width="1" opacity="0.5"/>
+        <line x1="300" y1="54" x2="356" y2="54" stroke="#38BDF8" stroke-width="1" opacity="0.5"/>
+        <rect x="308" y="33" width="18" height="4" rx="1" fill="#38BDF8" opacity="0.6"/>
+        <rect x="308" y="46" width="30" height="4" rx="1" fill="#38BDF8" opacity="0.4"/>
+        <rect x="308" y="58" width="24" height="4" rx="1" fill="#38BDF8" opacity="0.3"/>
+        <!-- Version badge -->
+        <rect x="388" y="36" width="52" height="24" rx="12" fill="#38BDF8" opacity="0.15"/>
+        <text x="414" y="52" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="600">v1→v5</text>
+      </svg>`,
+
+      // Auto-Rubric Engine: document + checkmark + scoring motif
+      "proj-auto-rubric": `<svg viewBox="0 0 480 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="project-thumb-svg">
+        <defs>
+          <linearGradient id="ar-bg" x1="0" y1="0" x2="480" y2="112" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#1e293b"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="112" fill="url(#ar-bg)"/>
+        <!-- Subtle dot grid -->
+        <pattern id="ar-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="0.8" fill="#334155"/>
+        </pattern>
+        <rect width="480" height="112" fill="url(#ar-dots)"/>
+        <!-- Document pages stacked -->
+        <rect x="50" y="22" width="44" height="56" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+        <rect x="56" y="16" width="44" height="56" rx="3" fill="#1e293b" stroke="#38BDF8" stroke-width="1.5"/>
+        <rect x="62" y="24" width="28" height="3" rx="1" fill="#475569"/>
+        <rect x="62" y="31" width="20" height="3" rx="1" fill="#475569"/>
+        <rect x="62" y="38" width="24" height="3" rx="1" fill="#475569"/>
+        <rect x="62" y="45" width="16" height="3" rx="1" fill="#475569"/>
+        <rect x="62" y="52" width="22" height="3" rx="1" fill="#475569"/>
+        <!-- Arrow -->
+        <line x1="115" y1="48" x2="155" y2="48" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="155,44 163,48 155,52" fill="#475569"/>
+        <!-- AI/Rubric processor box -->
+        <rect x="175" y="24" width="80" height="48" rx="6" stroke="#0EA5E9" stroke-width="2" fill="#0EA5E9" fill-opacity="0.08"/>
+        <text x="215" y="43" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="10" font-weight="600">RUBRIC</text>
+        <text x="215" y="58" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="10" font-weight="600">ENGINE</text>
+        <!-- Arrow -->
+        <line x1="268" y1="48" x2="308" y2="48" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="308,44 316,48 308,52" fill="#475569"/>
+        <!-- Score card with checkmark -->
+        <rect x="325" y="20" width="60" height="60" rx="6" stroke="#38BDF8" stroke-width="2" fill="none"/>
+        <text x="355" y="46" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="22" font-weight="700">96</text>
+        <text x="355" y="62" text-anchor="middle" fill="#475569" font-family="monospace" font-size="9">/100</text>
+        <!-- Human override badge -->
+        <circle cx="420" cy="38" r="18" stroke="#f59e0b" stroke-width="2" fill="#f59e0b" fill-opacity="0.1"/>
+        <path d="M412 38l5 5 10-10" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="420" y="68" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="8">HUMAN</text>
+        <text x="420" y="78" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="8">REVIEW</text>
+      </svg>`,
+
+      // Digital Librarian: file tree + search/RAG motif
+      "proj-digital-librarian": `<svg viewBox="0 0 480 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="project-thumb-svg">
+        <defs>
+          <linearGradient id="dl-bg" x1="0" y1="0" x2="480" y2="112" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#1e293b"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="112" fill="url(#dl-bg)"/>
+        <!-- Scattered files (messy) on left -->
+        <rect x="30" y="15" width="28" height="34" rx="2" fill="none" stroke="#64748b" stroke-width="1.2" transform="rotate(-8 44 32)"/>
+        <rect x="55" y="35" width="28" height="34" rx="2" fill="none" stroke="#64748b" stroke-width="1.2" transform="rotate(5 69 52)"/>
+        <rect x="38" y="55" width="28" height="34" rx="2" fill="none" stroke="#64748b" stroke-width="1.2" transform="rotate(-3 52 72)"/>
+        <rect x="75" y="20" width="28" height="34" rx="2" fill="none" stroke="#64748b" stroke-width="1.2" transform="rotate(12 89 37)"/>
+        <text x="65" y="100" text-anchor="middle" fill="#475569" font-family="monospace" font-size="9">5,000+ files</text>
+        <!-- Arrow -->
+        <line x1="118" y1="50" x2="160" y2="50" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="160,46 168,50 160,54" fill="#475569"/>
+        <!-- Organized vault -->
+        <rect x="180" y="18" width="70" height="72" rx="5" stroke="#38BDF8" stroke-width="2" fill="#38BDF8" fill-opacity="0.05"/>
+        <!-- Folder rows -->
+        <rect x="190" y="28" width="50" height="12" rx="2" fill="#38BDF8" fill-opacity="0.15" stroke="#38BDF8" stroke-width="1"/>
+        <rect x="190" y="46" width="50" height="12" rx="2" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-width="1"/>
+        <rect x="190" y="64" width="50" height="12" rx="2" fill="#38BDF8" fill-opacity="0.09" stroke="#38BDF8" stroke-width="1"/>
+        <text x="215" y="37" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="8">CURR/</text>
+        <text x="215" y="55" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="8">ADMIN/</text>
+        <text x="215" y="73" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="8">DOCS/</text>
+        <!-- Arrow -->
+        <line x1="265" y1="50" x2="305" y2="50" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="305,46 313,50 305,54" fill="#475569"/>
+        <!-- RAG chatbot -->
+        <rect x="320" y="22" width="76" height="64" rx="8" stroke="#0EA5E9" stroke-width="2" fill="#0EA5E9" fill-opacity="0.06"/>
+        <!-- Chat bubbles -->
+        <rect x="332" y="32" width="42" height="14" rx="7" fill="#38BDF8" fill-opacity="0.2"/>
+        <rect x="338" y="36" width="24" height="2" rx="1" fill="#38BDF8" opacity="0.5"/>
+        <rect x="340" y="52" width="46" height="14" rx="7" fill="#475569" fill-opacity="0.3"/>
+        <rect x="346" y="56" width="28" height="2" rx="1" fill="#64748b" opacity="0.5"/>
+        <text x="358" y="78" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">RAG Q&amp;A</text>
+        <!-- Lock icon for privacy -->
+        <rect x="422" y="36" width="24" height="18" rx="3" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+        <path d="M428 36v-6a6 6 0 0112 0v6" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+        <circle cx="434" cy="46" r="2" fill="#22c55e"/>
+        <text x="434" y="68" text-anchor="middle" fill="#22c55e" font-family="sans-serif" font-size="8" opacity="0.8">LOCAL</text>
+      </svg>`,
+
+      // Cross-System Data Integrity: two systems bridged
+      "proj-academic-data-automation-pipeline": `<svg viewBox="0 0 480 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="project-thumb-svg">
+        <defs>
+          <linearGradient id="cs-bg" x1="0" y1="0" x2="480" y2="112" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#1e293b"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="112" fill="url(#cs-bg)"/>
+        <!-- System A: LMS -->
+        <rect x="40" y="20" width="100" height="60" rx="8" stroke="#38BDF8" stroke-width="2" fill="#38BDF8" fill-opacity="0.06"/>
+        <text x="90" y="42" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="600">LMS</text>
+        <rect x="55" y="50" width="70" height="4" rx="1" fill="#38BDF8" opacity="0.2"/>
+        <rect x="55" y="58" width="50" height="4" rx="1" fill="#38BDF8" opacity="0.15"/>
+        <rect x="55" y="66" width="60" height="4" rx="1" fill="#38BDF8" opacity="0.1"/>
+        <!-- ETL Pipeline middle -->
+        <line x1="150" y1="50" x2="185" y2="50" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="185,46 193,50 185,54" fill="#475569"/>
+        <rect x="200" y="26" width="80" height="48" rx="6" stroke="#0EA5E9" stroke-width="2" fill="#0EA5E9" fill-opacity="0.08"/>
+        <text x="240" y="46" text-anchor="middle" fill="#0EA5E9" font-family="monospace" font-size="10" font-weight="600">ETL</text>
+        <text x="240" y="60" text-anchor="middle" fill="#0EA5E9" font-family="monospace" font-size="10" font-weight="600">PIPELINE</text>
+        <line x1="290" y1="50" x2="325" y2="50" stroke="#475569" stroke-width="2" stroke-dasharray="4 3"/>
+        <polygon points="325,46 333,50 325,54" fill="#475569"/>
+        <!-- System B: SIS -->
+        <rect x="340" y="20" width="100" height="60" rx="8" stroke="#38BDF8" stroke-width="2" fill="#38BDF8" fill-opacity="0.06"/>
+        <text x="390" y="42" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="600">SIS</text>
+        <rect x="355" y="50" width="70" height="4" rx="1" fill="#38BDF8" opacity="0.2"/>
+        <rect x="355" y="58" width="50" height="4" rx="1" fill="#38BDF8" opacity="0.15"/>
+        <rect x="355" y="66" width="60" height="4" rx="1" fill="#38BDF8" opacity="0.1"/>
+        <!-- Zero errors badge -->
+        <rect x="195" y="82" width="90" height="20" rx="10" fill="#22c55e" fill-opacity="0.12" stroke="#22c55e" stroke-width="1"/>
+        <text x="240" y="96" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="10" font-weight="600">0 ERRORS</text>
+      </svg>`,
+
+      // Assessment Governance: decision tree / workflow with human zones
+      "proj-hitl-assessment": `<svg viewBox="0 0 480 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="project-thumb-svg">
+        <defs>
+          <linearGradient id="ag-bg" x1="0" y1="0" x2="480" y2="112" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#1e293b"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="112" fill="url(#ag-bg)"/>
+        <!-- Workflow nodes -->
+        <!-- Node 1: Input -->
+        <circle cx="60" cy="50" r="18" stroke="#38BDF8" stroke-width="2" fill="#38BDF8" fill-opacity="0.08"/>
+        <text x="60" y="54" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="9" font-weight="600">IN</text>
+        <!-- Arrow -->
+        <line x1="82" y1="50" x2="118" y2="50" stroke="#475569" stroke-width="2"/>
+        <polygon points="118,46 126,50 118,54" fill="#475569"/>
+        <!-- Node 2: Group Score (automated) -->
+        <rect x="130" y="32" width="64" height="36" rx="5" stroke="#0EA5E9" stroke-width="2" fill="#0EA5E9" fill-opacity="0.08"/>
+        <text x="162" y="47" text-anchor="middle" fill="#0EA5E9" font-family="monospace" font-size="8" font-weight="600">GROUP</text>
+        <text x="162" y="58" text-anchor="middle" fill="#0EA5E9" font-family="monospace" font-size="8" font-weight="600">SCORE</text>
+        <!-- Arrow splits to two paths -->
+        <line x1="198" y1="44" x2="236" y2="30" stroke="#475569" stroke-width="2"/>
+        <line x1="198" y1="56" x2="236" y2="70" stroke="#475569" stroke-width="2"/>
+        <!-- Node 3a: Individual (human zone - amber) -->
+        <rect x="240" y="12" width="72" height="36" rx="5" stroke="#f59e0b" stroke-width="2" fill="#f59e0b" fill-opacity="0.08"/>
+        <text x="276" y="27" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="8" font-weight="600">INDIVIDUAL</text>
+        <text x="276" y="38" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="8" font-weight="600">⚑ HUMAN</text>
+        <!-- Node 3b: Override zone (human zone - amber) -->
+        <rect x="240" y="56" width="72" height="36" rx="5" stroke="#f59e0b" stroke-width="2" fill="#f59e0b" fill-opacity="0.08"/>
+        <text x="276" y="71" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="8" font-weight="600">OVERRIDE</text>
+        <text x="276" y="82" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="8" font-weight="600">±5 pts</text>
+        <!-- Merge arrows -->
+        <line x1="316" y1="30" x2="350" y2="50" stroke="#475569" stroke-width="2"/>
+        <line x1="316" y1="74" x2="350" y2="50" stroke="#475569" stroke-width="2"/>
+        <!-- Final output -->
+        <rect x="354" y="32" width="64" height="36" rx="5" stroke="#22c55e" stroke-width="2" fill="#22c55e" fill-opacity="0.08"/>
+        <text x="386" y="47" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="8" font-weight="600">FINAL</text>
+        <text x="386" y="58" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="8" font-weight="600">SCORE</text>
+        <!-- Audit trail icon -->
+        <line x1="422" y1="50" x2="438" y2="50" stroke="#475569" stroke-width="2"/>
+        <rect x="440" y="38" width="28" height="24" rx="3" stroke="#64748b" stroke-width="1.5" fill="none"/>
+        <rect x="446" y="44" width="16" height="2" rx="1" fill="#64748b" opacity="0.5"/>
+        <rect x="446" y="50" width="12" height="2" rx="1" fill="#64748b" opacity="0.4"/>
+        <rect x="446" y="56" width="14" height="2" rx="1" fill="#64748b" opacity="0.3"/>
+      </svg>`
+    };
+
+    // =========================
     // Data - KPIs reordered: governance first, then efficiency, then reliability
     // =========================
     const kpis = [
@@ -475,8 +705,7 @@
           "Context-aware email classification with structured JSON outputs",
           "Dry-run and audit logs at approximately $0.01/day"
         ],
-        thumbnailUrl: "./job-tracker.jpg",
-        thumbnailFit: "cover",
+        useSvgThumb: true,
         problem: "Static tracking could not keep pace with continuous Gmail updates. Rule-based parsing required manual keyword/company maintenance and hit ambiguity limits.",
         solution: "Migrated from rule-based Google Apps Script classification to LLM-powered classification with structured JSON outputs, while preserving pre-filtering, status-priority updates, and audit logs.",
         impact: "Reduced maintenance to near-zero list upkeep, improved context-aware classification, and achieved full auditability with dry-run previews at about $0.01/day.",
@@ -492,7 +721,7 @@
           "100% rubric alignment across 87 essays",
           "Human calibration caught 17-point scoring error"
         ],
-        thumbnailUrl: "./Time saved image.jpg",
+        useSvgThumb: true,
         problem: 'Grading 87+ essays caused high latency and "rater drift" - inconsistency creeping in over long grading sessions.',
         solution: "Built a Python/Gemini pipeline with strict system prompts acting as an objective examiner, with mandatory human calibration at every decision point.",
         impact: "63% reduction in grading time with 100% rubric alignment. Human override caught a 17-point scoring error the AI would have released unchecked.",
@@ -508,7 +737,7 @@
           "Zero privacy leaks - all processing local",
           "AI tested and rejected for categorization after regression"
         ],
-        thumbnailUrl: "./my private econ tutor rag.jpg",
+        useSvgThumb: true,
         problem: "5,000+ unstructured files were unsearchable; cloud tools hallucinated locations and silently degraded accuracy.",
         solution: 'Architected a local "Vacuum & Vault" Python script for deterministic organization, then built a private RAG chatbot (Ollama + ChromaDB + Streamlit) for curriculum Q&A.',
         impact: "Zero privacy leaks, 100% deterministic file organization. AI was tested for bulk categorization and deliberately rolled back after producing worse results than keyword rules.",
@@ -535,7 +764,7 @@
           "0 transposition errors"
         ],
         aliasesText: "Previously: Schoology-Veracross Bridge; Progress Report Generator",
-        thumbnailUrl: "./Veracross-Schoology image.jpg",
+        useSvgThumb: true,
         problem: "Disconnected Schoology (LMS) and Veracross (SIS) forced manual double entry and created high transposition risk across 95 student records each grading cycle.",
         solution: "Built a local Python ETL pipeline that ingests Schoology CSV exports, transforms and sorts the roster to match Veracross display order, and generates an immutable snapshot for deterministic, auditable entry. Browser automation was intentionally rejected after compliance review due to vendor acceptable use and FERPA/security risk; final workflow keeps a human-in-the-loop for last-mile entry.",
         impact: "Accuracy held across production cycles with no transposition errors detected; reduced lookup time by eliminating cross-system visual matching; maintained an audit trail from export to entry; and achieved the right level of automation without ToS/API violations.",
@@ -555,7 +784,7 @@
           "Baseline + bounded override model reduces live cognitive load",
           "Post-launch metrics defined: reliability, dispute rate, rater consistency"
         ],
-        thumbnailUrl: "./human in the loop approach.jpg",
+        useSvgThumb: true,
         problem: "High-stakes group assessment had structural failures: group grades masked individual understanding, charisma bias, cognitive overload during live evaluation, and AI made traditional plagiarism policing ineffective.",
         solution: "Redesigned the workflow: three-level rubric, separate group artifact score from individual understanding, baseline plus bounded override (+/-5), single Google Form intake with timestamped audit trail, and explicit human-only zones where AI cannot decide.",
         impact: "Pre-deployment. Architecture complete and ready to run. Success metrics will be collected after first delivery (reliability, dispute rate, and rater consistency).",
@@ -682,18 +911,10 @@
         );
 
         const thumbWrap = el("div", "overflow-hidden rounded-xl border border-slate-300 bg-slate-100/80");
-        const showThumb = Boolean(proj.thumbnailUrl) && proj.showThumbnail !== false;
-        if (showThumb) {
-          const img = el("img", "h-28 w-full object-cover", {
-            src: proj.thumbnailUrl,
-            alt: `${safeText(proj.title)} thumbnail`,
-            loading: "lazy",
-            decoding: "async"
-          });
-          img.onerror = () => {
-            console.warn(`[Project thumbnail missing] ${proj.id}: ${proj.thumbnailUrl}`);
-          };
-          thumbWrap.appendChild(img);
+
+        // Use inline SVG if available, otherwise fallback
+        if (proj.useSvgThumb && projectSvgs[proj.id]) {
+          thumbWrap.innerHTML = projectSvgs[proj.id];
         } else {
           const placeholder = el("div", "h-28 w-full bg-gradient-to-br from-slate-200 to-slate-300");
           const placeholderText = el("div", "flex h-full w-full items-center justify-center text-lg font-semibold text-slate-600");
@@ -925,19 +1146,13 @@
         wrap.appendChild(header);
       }
 
-      if (proj.thumbnailUrl) {
+      // Show SVG illustration in modal too (collapsible)
+      if (proj.useSvgThumb && projectSvgs[proj.id]) {
         const mediaDetails = el("details", "rounded-xl border border-slate-300 bg-slate-100/80 p-4");
         const mediaSummary = el("summary", "cursor-pointer text-sm font-semibold text-slate-800 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent-400/40 rounded-md px-2 py-1 -mx-2");
-        mediaSummary.textContent = "Artifact image (optional)";
-        const mediaFitClass = proj.thumbnailFit === "contain" ? "object-contain" : "object-cover";
-        const mediaWrapBgClass = proj.thumbnailFit === "contain" ? "bg-white" : "bg-slate-100/80";
-        const mediaWrap = el("div", `mt-4 overflow-hidden rounded-lg border border-slate-300 ${mediaWrapBgClass}`);
-        const mediaImg = el("img", `h-56 w-full ${mediaFitClass}`, {
-          src: proj.thumbnailUrl,
-          alt: `${safeText(proj.title)} artifact image`,
-          loading: "lazy"
-        });
-        mediaWrap.appendChild(mediaImg);
+        mediaSummary.textContent = "Workflow diagram (optional)";
+        const mediaWrap = el("div", "mt-4 overflow-hidden rounded-lg border border-slate-300 bg-slate-900");
+        mediaWrap.innerHTML = projectSvgs[proj.id];
         mediaDetails.appendChild(mediaSummary);
         mediaDetails.appendChild(mediaWrap);
         wrap.appendChild(mediaDetails);
