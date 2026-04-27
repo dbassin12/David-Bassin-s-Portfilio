@@ -4,442 +4,793 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pre-Shoah Jewish Communities Research Project</title>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1a1410;--cream:#faf6f0;--warm:#f5f0e8;--gold:#b8860b;--brown:#5c4a32;--brown-lt:#8b7355;--accent:#8b2500;--blue:#2c5f7c;--blue-lt:#e8f0f5;--green:#2d5a27;--green-lt:#e8f2e6;--border:#d4c5a9;--shadow:rgba(26,20,16,0.08)}
+:root{
+  --ink:#1a1410;--cream:#faf6f0;--warm:#f5f0e8;--white:#ffffff;
+  --gold:#b8860b;--brown:#5c4a32;--brown-lt:#8b7355;
+  --accent:#8b2500;--blue:#2c5f7c;--green:#2d5a27;
+  --border:#d4c5a9;--shadow:rgba(26,20,16,0.08);
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',-apple-system,system-ui,sans-serif;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-size:16px}
-.hero{background:linear-gradient(165deg,#1a1410 0%,#2c2218 40%,#3d2e1e 100%);color:var(--cream);padding:60px 40px 45px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23b8860b' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:.6}
-.hero-content{position:relative;max-width:680px;margin:0 auto}
-.hero h1{font-family:'Crimson Pro',serif;font-weight:300;font-size:clamp(1.8rem,5vw,2.8rem);letter-spacing:.02em;margin-bottom:8px;line-height:1.2}
-.hero h1 strong{font-weight:600;color:var(--gold)}
-.hero .sub{font-size:.95rem;opacity:.75;max-width:500px;margin:0 auto 20px;line-height:1.55}
-.tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:4px 14px;border-radius:2px}
+body{font-family:var(--sans);background:var(--cream);color:#2D2218;line-height:1.65;font-size:16px}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--gold)}
 
-.nav{background:#fff;border-bottom:1px solid var(--border);padding:0 16px;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px var(--shadow)}
-.nav-inner{max-width:940px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
+/* ── HERO ── */
+.hero{background:linear-gradient(165deg,#1a1410 0%,#241a12 60%,#2c2218 100%);color:var(--cream);padding:70px 40px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b8860b' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");opacity:.5}
+.hero-inner{position:relative;max-width:1080px;margin:0 auto}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+.eyebrow.muted{color:#8a7a5c}
+.hero-rule{height:1px;background:var(--gold);width:100%;margin:0 0 36px;opacity:.85}
+.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,7vw,4.6rem);font-weight:400;line-height:1.05;color:var(--cream);margin-bottom:6px}
+.hero h1 strong{font-weight:700;color:var(--gold);display:block}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.5vw,1.25rem);color:#c9bfa9;max-width:640px;margin:18px 0 32px;line-height:1.5}
+.hero-foot{display:flex;align-items:center;gap:14px;margin-top:18px}
+.hero-foot .bar{width:32px;height:2px;background:var(--gold)}
+.hero-foot .label{font-family:var(--sans);font-size:.78rem;color:#8a7a5c;letter-spacing:.18em;text-transform:uppercase}
+
+/* ── NAV ── */
+.nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px var(--shadow)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 28px;display:flex;overflow-x:auto;scrollbar-width:none}
 .nav-inner::-webkit-scrollbar{display:none}
-.nav-btn{background:none;border:none;padding:13px 14px;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--brown-lt);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s}
+.nav-btn{background:none;border:none;padding:18px 18px;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brown-lt);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s}
 .nav-btn:hover{color:var(--ink)}
 .nav-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
 
-.main{max-width:940px;margin:0 auto;padding:32px 20px 70px}
-.sec{display:none;animation:fadeIn .25s ease}
+/* ── MAIN / SECTIONS ── */
+.main{max-width:1080px;margin:0 auto;padding:60px 28px 80px}
+.sec{display:none;animation:fadeIn .3s ease}
 .sec.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-.sh{margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid var(--border)}
-.sh h2{font-family:'Crimson Pro',serif;font-size:1.6rem;font-weight:600;margin-bottom:3px}
-.sh p{color:var(--brown-lt);font-size:.9rem}
+/* Section header — eyebrow + gold rule + serif title + italic subtitle */
+.sh{margin-bottom:36px}
+.sh .eb{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.sh .eb-rule{width:48px;height:2px;background:var(--gold);margin-top:1px}
+.sh h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:12px;margin-top:14px}
+.sh p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--brown-lt);max-width:780px;line-height:1.5}
 
-.card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:16px;box-shadow:0 1px 4px var(--shadow)}
-.card h3{font-family:'Crimson Pro',serif;font-size:1.15rem;font-weight:600;margin-bottom:8px}
-.card p,.card li{font-size:.9rem;line-height:1.65;color:#3a3228}
-.card ul,.card ol{padding-left:18px;margin-top:5px}
-.card li{margin-bottom:4px}
-.card a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue)}
-.card a:hover{color:var(--gold);border-color:var(--gold)}
+/* Subsection header (for stacked groups within a tab) */
+.subh{margin:48px 0 20px;padding-top:24px;border-top:1px solid var(--border)}
+.subh:first-child{border-top:none;padding-top:0;margin-top:0}
+.subh .eb{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.subh .eb-rule{width:32px;height:1.5px;background:var(--gold)}
+.subh h3{font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--ink);margin-top:10px}
+.subh p{font-family:var(--serif);font-style:italic;font-size:.98rem;color:var(--brown-lt);margin-top:4px;max-width:720px}
 
-.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px}
-.role-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:18px;border-top:4px solid var(--gold);box-shadow:0 1px 4px var(--shadow)}
-.role-card.rc-b{border-top-color:var(--blue)}.role-card.rc-g{border-top-color:var(--green)}.role-card.rc-a{border-top-color:var(--accent)}
-.rn{display:inline-block;width:24px;height:24px;background:var(--gold);color:#fff;font-size:.75rem;font-weight:700;border-radius:50%;text-align:center;line-height:24px;margin-bottom:6px}
-.rc-b .rn{background:var(--blue)}.rc-g .rn{background:var(--green)}.rc-a .rn{background:var(--accent)}
-.role-card h4{font-family:'Crimson Pro',serif;font-size:1rem;font-weight:600;margin-bottom:4px}
-.role-card ul{padding-left:14px;margin-top:4px}
-.role-card li{font-size:.82rem;color:#3a3228;margin-bottom:2px}
+/* ── CARDS ── */
+.card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:28px 30px;margin-bottom:18px;box-shadow:0 1px 4px var(--shadow);position:relative}
+.card.has-stripe{padding-top:32px}
+.card.has-stripe::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);border-radius:4px 4px 0 0}
+.card.stripe-b::before{background:var(--blue)}.card.stripe-g::before{background:var(--green)}.card.stripe-a::before{background:var(--accent)}
+.card h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+.card .lead{font-family:var(--serif);font-style:italic;color:var(--brown-lt);font-size:1.02rem;margin-bottom:14px}
+.card p,.card li{font-size:.95rem;line-height:1.7;color:#3a3228}
+.card ul,.card ol{padding-left:22px;margin-top:8px}
+.card li{margin-bottom:6px}
+.card a{border-bottom:1px solid currentColor}
 
-.tip{background:var(--blue-lt);border-left:4px solid var(--blue);padding:14px 18px;border-radius:0 6px 6px 0;margin:16px 0}
+/* Grid utilities */
+.grid{display:grid;gap:14px;margin-top:14px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-12{grid-template-columns:repeat(4,1fr);gap:12px}
+
+/* ── PHASE / DAY CARDS (4-day plan) ── */
+.phase{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 1px 4px var(--shadow);display:flex;flex-direction:column}
+.phase .top{padding:13px 20px;color:var(--white);font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gold)}
+.phase.p2 .top{background:var(--blue)}.phase.p3 .top{background:var(--accent)}
+.phase .body{padding:18px 22px 22px}
+.phase .phase-lbl{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brown-lt);margin-bottom:6px}
+.phase h4{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:10px}
+.phase .dvd{width:32px;height:2px;background:var(--gold);margin-bottom:12px}
+.phase.p2 .dvd{background:var(--blue)}.phase.p3 .dvd{background:var(--accent)}
+.phase ul{padding-left:20px;margin:0}
+.phase li{font-size:.9rem;color:#3a3228;line-height:1.55;margin-bottom:4px}
+.phase p{font-size:.92rem;color:#3a3228;line-height:1.6}
+
+/* ── ROLE CARDS ── */
+.role-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:24px 18px 20px;text-align:center;position:relative;box-shadow:0 1px 4px var(--shadow)}
+.role-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);border-radius:4px 4px 0 0}
+.role-card.rc-b::before{background:var(--blue)}.role-card.rc-g::before{background:var(--green)}.role-card.rc-a::before{background:var(--accent)}
+.role-card .num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--white);font-family:var(--serif);font-weight:700;font-size:1.05rem;margin:6px 0 12px}
+.role-card.rc-b .num{background:var(--blue)}.role-card.rc-g .num{background:var(--green)}.role-card.rc-a .num{background:var(--accent)}
+.role-card h4{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:10px;min-height:2.6em;display:flex;align-items:flex-start;justify-content:center}
+.role-card .dvd{width:28px;height:2px;background:var(--gold);margin:0 auto 12px}
+.role-card.rc-b .dvd{background:var(--blue)}.role-card.rc-g .dvd{background:var(--green)}.role-card.rc-a .dvd{background:var(--accent)}
+.role-card ul{list-style:none;padding:0;margin:0;text-align:left}
+.role-card li{font-size:.84rem;color:#3a3228;padding-left:16px;position:relative;margin-bottom:5px;line-height:1.45}
+.role-card li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--brown-lt);border-radius:1px}
+
+/* ── COMMUNITY CARDS (compact, left stripe) ── */
+.comm-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:14px 16px 14px 20px;position:relative;box-shadow:0 1px 3px var(--shadow)}
+.comm-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;background:var(--gold)}
+.comm-card.cc-a::before{background:var(--accent)}.comm-card.cc-b::before{background:var(--blue)}.comm-card.cc-r::before{background:var(--brown)}
+.comm-card .city{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:4px}
+.comm-card .country{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.comm-card.cc-a .country{color:var(--accent)}.comm-card.cc-b .country{color:var(--blue)}.comm-card.cc-r .country{color:var(--brown)}
+.comm-card .epithet{font-family:var(--serif);font-style:italic;font-size:.86rem;color:var(--brown-lt);line-height:1.35}
+
+/* ── DELIVERABLE CARDS ── */
+.deliv-card{background:var(--white);border:1px solid var(--border);border-radius:4px;display:flex;flex-direction:column;position:relative;box-shadow:0 1px 4px var(--shadow);overflow:hidden}
+.deliv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.deliv-card.dc-b::before{background:var(--blue)}.deliv-card.dc-a::before{background:var(--accent)}
+.deliv-card .body{padding:24px 22px 14px;flex:1}
+.deliv-card .num{font-family:var(--serif);font-size:1.85rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:14px}
+.deliv-card.dc-b .num{color:var(--blue)}.deliv-card.dc-a .num{color:var(--accent)}
+.deliv-card .kicker{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.deliv-card.dc-b .kicker{color:var(--blue)}.deliv-card.dc-a .kicker{color:var(--accent)}
+.deliv-card h4{font-family:var(--serif);font-size:1.18rem;font-weight:700;color:var(--ink);margin-bottom:10px}
+.deliv-card .dvd{width:28px;height:2px;background:var(--gold);margin-bottom:12px}
+.deliv-card.dc-b .dvd{background:var(--blue)}.deliv-card.dc-a .dvd{background:var(--accent)}
+.deliv-card .desc{font-size:.9rem;color:#3a3228;line-height:1.55}
+.deliv-card .foot{padding:12px 22px;background:var(--warm);font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--gold);border-top:1px solid var(--border)}
+.deliv-card.dc-b .foot{color:var(--blue)}.deliv-card.dc-a .foot{color:var(--accent)}
+.deliv-card .foot a{color:inherit;border-bottom:1px solid currentColor}
+
+/* ── TIPS / CALLOUTS ── */
+.tip{background:#e8f0f5;border-left:4px solid var(--blue);padding:18px 22px;border-radius:0 4px 4px 0;margin:20px 0}
 .tip.warn{background:#fef3e2;border-left-color:var(--gold)}
 .tip.danger{background:#fde8e4;border-left-color:var(--accent)}
-.tip strong{display:block;margin-bottom:2px;font-size:.85rem}
-.tip p{font-size:.85rem;color:#3a3228;margin:0}
+.tip strong{display:block;font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+.tip p{font-size:.92rem;color:#3a3228;line-height:1.55;margin:0}
 
-.phase-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.phase{flex:1;min-width:180px;background:#fff;border:1px solid var(--border);border-radius:6px;padding:16px;box-shadow:0 1px 4px var(--shadow);position:relative}
-.phase::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:6px 6px 0 0}
-.phase.p1::before{background:var(--gold)}.phase.p2::before{background:var(--blue)}.phase.p3::before{background:var(--green)}
-.plbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
-.p1 .plbl{color:var(--gold)}.p2 .plbl{color:var(--blue)}.p3 .plbl{color:var(--green)}
-.phase h4{font-family:'Crimson Pro',serif;font-size:.95rem;font-weight:600;margin-bottom:4px}
-.phase p,.phase li{font-size:.82rem;color:var(--brown-lt);line-height:1.5}
-.phase ul{padding-left:14px;margin-top:4px}
-.phase li{margin-bottom:2px}
+/* ── RUBRIC ROWS ── */
+.rubric{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 1px 4px var(--shadow)}
+.rubric-row{display:grid;grid-template-columns:90px 1fr 2.2fr;align-items:center;gap:18px;padding:18px 22px;border-bottom:1px solid var(--border)}
+.rubric-row:last-child{border-bottom:none}
+.rubric-row:nth-child(even){background:#fdfbf7}
+.rubric-row .pts{font-family:var(--serif);font-size:1.85rem;font-weight:700;color:var(--gold);line-height:1;display:flex;align-items:baseline;gap:6px}
+.rubric.indiv .rubric-row .pts{color:var(--accent)}
+.rubric-row .pts span{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.12em;color:var(--brown-lt);text-transform:uppercase}
+.rubric-row .cat{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--ink)}
+.rubric-row .desc{font-size:.92rem;color:#3a3228;line-height:1.55}
 
-.rtable{width:100%;border-collapse:collapse;margin-top:12px;font-size:.84rem}
-.rtable th,.rtable td{padding:9px 12px;text-align:left;border:1px solid var(--border)}
-.rtable th{background:var(--warm);font-weight:600}
-.rtable tr:nth-child(even) td{background:#fdfbf7}
-.rtable .pts{font-weight:700;color:var(--gold);text-align:center;white-space:nowrap}
+/* ── SOURCE LIST ── */
+.sources-block{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:24px 28px;margin-bottom:18px;box-shadow:0 1px 4px var(--shadow)}
+.sources-block.has-stripe{position:relative;padding-top:30px}
+.sources-block.has-stripe::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);border-radius:4px 4px 0 0}
+.sources-block .country-tag{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.sources-block h4{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.source-item{margin-bottom:10px;font-size:.9rem;line-height:1.55;color:#3a3228}
+.source-item:last-child{margin-bottom:0}
+.source-item strong{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:.95rem}
+.source-item em{color:var(--brown-lt);font-style:italic;font-size:.85rem}
+.source-item a{color:var(--blue);border-bottom:1px dotted var(--blue);word-break:break-all}
 
-.source-group{margin-bottom:20px}
-.source-group h4{font-family:'Crimson Pro',serif;font-size:1.05rem;font-weight:600;margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--border)}
-.source-group .comm-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);margin-bottom:4px;display:block}
-.source-item{margin-bottom:6px;font-size:.88rem;line-height:1.5}
-.source-item strong{font-weight:600}
-.source-item a{color:var(--blue);text-decoration:none;border-bottom:1px dotted var(--blue);word-break:break-all}
+/* ── SLIDE STRUCTURE ROWS (slides+q&a tab) ── */
+.slide-spec{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 1px 4px var(--shadow);margin-bottom:18px}
+.slide-spec-row{display:grid;grid-template-columns:60px 1.6fr 3fr;gap:16px;padding:12px 22px;border-bottom:1px solid var(--border);align-items:center}
+.slide-spec-row:last-child{border-bottom:none}
+.slide-spec-row.bib{background:#fdf3ee}
+.slide-spec-row .n{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--gold)}
+.slide-spec-row.bib .n{color:var(--accent)}
+.slide-spec-row .t{font-family:var(--serif);font-size:1.02rem;font-weight:700;color:var(--ink)}
+.slide-spec-row .d{font-family:var(--serif);font-style:italic;font-size:.92rem;color:var(--brown-lt)}
+.slide-spec-row.bib .d{font-style:normal;font-weight:700;color:var(--accent)}
 
-.footer{text-align:center;padding:24px 16px;font-size:.78rem;color:var(--brown-lt);border-top:1px solid var(--border)}
-@media(max-width:640px){.hero{padding:40px 16px 30px}.roles-grid{grid-template-columns:1fr}.nav-btn{padding:11px 10px;font-size:.76rem}.phase-row{flex-direction:column}}
+/* ── AI POLICY COLUMNS ── */
+.ai-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.ai-col{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:24px 26px;position:relative;box-shadow:0 1px 4px var(--shadow)}
+.ai-col::before{content:'';position:absolute;top:0;left:0;bottom:0;width:5px;background:var(--green);border-radius:4px 0 0 4px}
+.ai-col.ai-no::before{background:var(--accent)}
+.ai-col .label{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.ai-col.ai-no .label{color:var(--accent)}
+.ai-col h3{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:14px}
+.ai-col ul{list-style:none;padding:0;margin:0}
+.ai-col li{font-size:.92rem;color:#3a3228;padding-left:18px;position:relative;margin-bottom:8px;line-height:1.55}
+.ai-col li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--green);border-radius:1px}
+.ai-col.ai-no li::before{background:var(--accent)}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:32px 16px;font-size:.78rem;color:var(--brown-lt);border-top:1px solid var(--border);background:var(--warm)}
+.footer-rule{display:block;width:36px;height:2px;background:var(--gold);margin:0 auto 12px}
+.footer .label{font-family:var(--sans);letter-spacing:.18em;text-transform:uppercase;font-size:.72rem}
+
+/* ── RESPONSIVE ── */
+@media(max-width:880px){
+  .grid-3,.grid-4,.grid-12{grid-template-columns:repeat(2,1fr)}
+  .ai-cols{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .hero{padding:48px 22px 40px}
+  .hero-top{flex-direction:column;align-items:flex-start;gap:8px}
+  .nav-inner{padding:0 14px}
+  .nav-btn{padding:14px 12px;font-size:.7rem}
+  .main{padding:36px 18px 60px}
+  .grid-3,.grid-4,.grid-12{grid-template-columns:1fr}
+  .rubric-row{grid-template-columns:70px 1fr;gap:12px}
+  .rubric-row .desc{grid-column:1/-1;padding-top:4px}
+  .slide-spec-row{grid-template-columns:40px 1fr;gap:10px}
+  .slide-spec-row .d{grid-column:1/-1;padding-top:2px}
+}
 </style>
 </head>
 <body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
 <div class="hero">
-<div class="hero-content">
-<div class="tag">World History</div>
-<h1 style="margin-top:14px">Pre-Shoah <strong>Jewish Communities</strong></h1>
-<p class="sub">Research a vibrant Jewish community as it existed before the Holocaust. Understand the people, culture, and institutions that made it unique.</p>
+<div class="hero-inner">
+  <div class="hero-top">
+    <span class="eyebrow">DRS High School &middot; World History</span>
+    <span class="eyebrow muted">April 27 &ndash; 30, 2026</span>
+  </div>
+  <div class="hero-rule"></div>
+  <h1>Pre-Shoah <strong>Jewish Communities</strong></h1>
+  <p class="sub">Research a Jewish community as it lived before 1939 &mdash; its religion, language, food, culture, key figures, demographics, and assimilation. Bring it back whole.</p>
+  <div class="hero-foot">
+    <span class="bar"></span>
+    <span class="label">A four-day research project</span>
+  </div>
 </div>
 </div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
 <div class="nav">
 <div class="nav-inner">
-<button class="nav-btn active" onclick="go('overview',this)">Overview</button>
-<button class="nav-btn" onclick="go('timeline',this)">4-Day Plan</button>
-<button class="nav-btn" onclick="go('roles',this)">Your Role</button>
-<button class="nav-btn" onclick="go('sources',this)">Source Bank</button>
-<button class="nav-btn" onclick="go('rubric',this)">Rubric</button>
-<button class="nav-btn" onclick="go('slides',this)">Slides & Q&A</button>
-<button class="nav-btn" onclick="go('ai',this)">AI Policy</button>
+  <button class="nav-btn active" onclick="go('overview',this)">Overview</button>
+  <button class="nav-btn" onclick="go('timeline',this)">4-Day Plan</button>
+  <button class="nav-btn" onclick="go('roles',this)">Your Role</button>
+  <button class="nav-btn" onclick="go('sources',this)">Source Bank</button>
+  <button class="nav-btn" onclick="go('rubric',this)">Rubric</button>
+  <button class="nav-btn" onclick="go('slides',this)">Slides &amp; Q&amp;A</button>
+  <button class="nav-btn" onclick="go('ai',this)">AI Policy</button>
 </div>
 </div>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
 <div class="main">
 
-<!-- OVERVIEW -->
+<!-- ── OVERVIEW ── -->
 <div id="overview" class="sec active">
-<div class="sh"><h2>What Is This Project?</h2><p>A focused, 4-period research project on pre-Holocaust Jewish life.</p></div>
-<div class="card">
-<h3>The Big Idea</h3>
-<p>Jewish history is often taught through tragedy. In this project, you research what a Jewish community actually <em>looked like</em> before the Holocaust: its synagogues, schools, leaders, daily life, and culture. The goal is to understand these communities as living, complex societies.</p>
-</div>
-<div class="card">
-<h3>How It Works (4 Class Periods)</h3>
-<ul>
-<li><strong>Period 1 (Mon, April 27):</strong> Form groups of 4, pick your community, assign roles, and start researching using provided sources.</li>
-<li><strong>Period 2 (Tue, April 28):</strong> Finish research, combine your work, and build a short slide deck (7 slides).</li>
-<li><strong>Periods 3-4 (Wed-Thu, April 29-30):</strong> Group presentations (5 minutes each) followed by quick Q&amp;A from the teacher.</li>
-</ul>
-</div>
-<div class="card">
-<h3>What You Submit (on presentation day)</h3>
-<ol>
-<li><strong>Intake Form</strong> -- your teacher will share a Google Form. One person submits it for your group during Period 1.</li>
-<li><strong>Research Worksheet</strong> -- one per student, filled out during Periods 1-2</li>
-<li><strong>Presentation Slides</strong> -- one deck per group (7 slides)</li>
-</ol>
-</div>
-<div class="tip warn">
-<strong>Time is tight.</strong>
-<p>You have 4 periods total. Use the Source Bank tab to go directly to real sources instead of wandering the internet. The research worksheet guides exactly what to look for. Stay focused and you will finish on time.</p>
-</div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">01 &middot; The Project</span><span class="eb-rule"></span></div>
+    <h2>What This Project Is</h2>
+    <p>Jewish history is often taught through its endings. This project asks what existed before.</p>
+  </div>
+
+  <div class="card has-stripe">
+    <h3>The Big Idea</h3>
+    <p>You research a single Jewish community as it <em>actually lived</em> before the Holocaust: its synagogues, schools, leaders, language, food, and daily rhythms. The goal is to understand these communities as living, complex societies &mdash; not as victims of what came after.</p>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">How It Works</span><span class="eb-rule"></span></div>
+    <h3>Four Class Periods</h3>
+    <p>Groups of four. Two days of research. Two days of presentations.</p>
+  </div>
+  <div class="grid grid-3">
+    <div class="phase p1">
+      <div class="top">Mon &middot; Apr 27</div>
+      <div class="body">
+        <div class="phase-lbl">Period 1</div>
+        <h4>Launch &amp; Research</h4>
+        <div class="dvd"></div>
+        <p>Form groups, pick your community, assign roles, submit the Intake Form, and start researching using the Source Bank.</p>
+      </div>
+    </div>
+    <div class="phase p2">
+      <div class="top">Tue &middot; Apr 28</div>
+      <div class="body">
+        <div class="phase-lbl">Period 2</div>
+        <h4>Build &amp; Finalize</h4>
+        <div class="dvd"></div>
+        <p>Finish your worksheet, combine findings, build a 7-slide deck plus bibliography, and practice your section.</p>
+      </div>
+    </div>
+    <div class="phase p3">
+      <div class="top">Wed&ndash;Thu &middot; Apr 29&ndash;30</div>
+      <div class="body">
+        <div class="phase-lbl">Periods 3&ndash;4</div>
+        <h4>Present &amp; Defend</h4>
+        <div class="dvd"></div>
+        <p>5-minute group presentation, 2&ndash;3 questions from the teacher, every group member must speak.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">Communities</span><span class="eb-rule"></span></div>
+    <h3>Pick a Community to Research</h3>
+    <p>Twelve options across pre-Holocaust Europe. Each has verified sources in the Source Bank tab.</p>
+  </div>
+  <div class="grid grid-12">
+    <div class="comm-card"><div class="city">Vilna</div><div class="country">Lithuania</div><div class="epithet">"Jerusalem of Lithuania"</div></div>
+    <div class="comm-card cc-a"><div class="city">Salonika</div><div class="country">Greece</div><div class="epithet">"Jerusalem of the Balkans"</div></div>
+    <div class="comm-card cc-b"><div class="city">Warsaw</div><div class="country">Poland</div><div class="epithet">Largest Jewish city in Europe</div></div>
+    <div class="comm-card cc-r"><div class="city">Budapest</div><div class="country">Hungary</div><div class="epithet">Center of Hungarian Jewry</div></div>
+    <div class="comm-card"><div class="city">Amsterdam</div><div class="country">Netherlands</div><div class="epithet">Sephardic &amp; Ashkenazi crossroads</div></div>
+    <div class="comm-card cc-a"><div class="city">Prague</div><div class="country">Czech Republic</div><div class="epithet">One of Europe's oldest</div></div>
+    <div class="comm-card cc-b"><div class="city">Kraków</div><div class="country">Poland</div><div class="epithet">Kazimierz quarter</div></div>
+    <div class="comm-card cc-r"><div class="city">Berlin</div><div class="country">Germany</div><div class="epithet">Birthplace of Reform &amp; Haskalah</div></div>
+    <div class="comm-card"><div class="city">Kiev</div><div class="country">Ukraine</div><div class="epithet">Yiddish golden age 1920s&ndash;30s</div></div>
+    <div class="comm-card cc-a"><div class="city">Rome</div><div class="country">Italy</div><div class="epithet">2,000+ years of community</div></div>
+    <div class="comm-card cc-b"><div class="city">Venice</div><div class="country">Italy</div><div class="epithet">Original ghetto (1516)</div></div>
+    <div class="comm-card cc-r"><div class="city">Paris</div><div class="country">France</div><div class="epithet">The Marais quarter</div></div>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">What You Submit</span><span class="eb-rule"></span></div>
+    <h3>Three Deliverables</h3>
+    <p>By presentation day. No exceptions.</p>
+  </div>
+  <div class="grid grid-3">
+    <div class="deliv-card">
+      <div class="body">
+        <div class="num">01</div>
+        <div class="kicker">Day 1 &middot; One per group</div>
+        <h4>Intake Form</h4>
+        <div class="dvd"></div>
+        <p class="desc">Google Form &mdash; your group's chosen community, members, and assigned roles. Submitted once during Period 1.</p>
+      </div>
+      <div class="foot"><a href="https://forms.gle/i6zmCf7wv9Q8euNB8" target="_blank">forms.gle/i6zmCf7wv9Q8euNB8</a></div>
+    </div>
+    <div class="deliv-card dc-b">
+      <div class="body">
+        <div class="num">02</div>
+        <div class="kicker">Days 1&ndash;2 &middot; Each student</div>
+        <h4>Research Worksheet</h4>
+        <div class="dvd"></div>
+        <p class="desc">Pre-Shoah Communities Research Worksheet &mdash; your role's section filled out, with sources cited. Each student submits their own copy.</p>
+      </div>
+      <div class="foot">Filename: Research-Worksheet Pre Shoa Communties</div>
+    </div>
+    <div class="deliv-card dc-a">
+      <div class="body">
+        <div class="num">03</div>
+        <div class="kicker">Day 2 &middot; One per group</div>
+        <h4>Group Slide Deck</h4>
+        <div class="dvd"></div>
+        <p class="desc">Seven slides on your community plus a bibliography on the final slide listing every source the group used.</p>
+      </div>
+      <div class="foot">Bibliography is required &mdash; uncited claims cost points.</div>
+    </div>
+  </div>
+
+  <div class="tip warn">
+    <strong>Time is tight.</strong>
+    <p>You have four periods total. Use the Source Bank tab to go directly to verified sources instead of wandering Google. The worksheet tells you exactly what to look for. Stay focused and you will finish on time.</p>
+  </div>
 </div>
 
-<!-- TIMELINE -->
+<!-- ── 4-DAY PLAN ── -->
 <div id="timeline" class="sec">
-<div class="sh"><h2>The 4-Day Plan</h2><p>Here is exactly what happens each period.</p></div>
-<div class="phase-row">
-<div class="phase p1">
-<div class="plbl">Period 1 &middot; Mon, April 27</div>
-<h4>Launch & Research</h4>
-<ul>
-<li>Form groups of 4</li>
-<li>Pick a community</li>
-<li>Assign roles (one per person)</li>
-<li>Submit the <strong>Intake Form</strong> (Google Form, one per group)</li>
-<li>Start researching using Source Bank</li>
-<li>Begin filling out your Research Worksheet</li>
-</ul>
-</div>
-<div class="phase p2">
-<div class="plbl">Period 2 &middot; Tue, April 28</div>
-<h4>Build & Finalize</h4>
-<ul>
-<li>Finish your Research Worksheet</li>
-<li>Share findings with your group</li>
-<li>Build your slide deck (7 slides)</li>
-<li>Visual Specialist checks consistency</li>
-<li>Practice talking through your section</li>
-</ul>
-</div>
-<div class="phase p3">
-<div class="plbl">Periods 3-4 &middot; Wed-Thu, April 29-30</div>
-<h4>Present & Defend</h4>
-<ul>
-<li>Submit slides and worksheets</li>
-<li>5-minute group presentation</li>
-<li>2-3 quick questions from teacher</li>
-<li>Every group member must speak</li>
-</ul>
-</div>
-</div>
-<div class="tip" style="margin-top:18px">
-<strong>Period 1 is your only dedicated research period.</strong>
-<p>If you do not finish your Research Worksheet in Period 1, you need to complete it before Period 2. Do not show up to Period 2 without your research done.</p>
-</div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">02 &middot; Timeline</span><span class="eb-rule"></span></div>
+    <h2>The 4-Day Plan</h2>
+    <p>Here is exactly what happens each period. April 27 &ndash; 30, four consecutive class days.</p>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="phase p1">
+      <div class="top">Mon &middot; Apr 27</div>
+      <div class="body">
+        <div class="phase-lbl">Period 1</div>
+        <h4>Launch &amp; Research</h4>
+        <div class="dvd"></div>
+        <ul>
+          <li>Form groups of 4</li>
+          <li>Pick your community</li>
+          <li>Assign roles (one per person)</li>
+          <li>Submit the Intake Form (Google Form, one per group)</li>
+          <li>Start researching using the Source Bank</li>
+          <li>Begin the Research Worksheet</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p2">
+      <div class="top">Tue &middot; Apr 28</div>
+      <div class="body">
+        <div class="phase-lbl">Period 2</div>
+        <h4>Build &amp; Finalize</h4>
+        <div class="dvd"></div>
+        <ul>
+          <li>Finish your Research Worksheet</li>
+          <li>Share findings with your group</li>
+          <li>Build your 7-slide deck plus bibliography</li>
+          <li>Visual Specialist checks consistency</li>
+          <li>Practice your section</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase p3">
+      <div class="top">Wed&ndash;Thu &middot; Apr 29&ndash;30</div>
+      <div class="body">
+        <div class="phase-lbl">Periods 3&ndash;4</div>
+        <h4>Present &amp; Defend</h4>
+        <div class="dvd"></div>
+        <ul>
+          <li>Submit slides and worksheets</li>
+          <li>5-minute group presentation</li>
+          <li>2&ndash;3 quick questions from teacher</li>
+          <li>Every group member must speak</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>Period 1 is your only dedicated research period.</strong>
+    <p>If you do not finish your Research Worksheet in Period 1, you need to complete it before Period 2. Do not show up to Period 2 without your research done.</p>
+  </div>
 </div>
 
-<!-- ROLES -->
+<!-- ── ROLES ── -->
 <div id="roles" class="sec">
-<div class="sh"><h2>Research Roles</h2><p>Each person takes one role and becomes the group expert on that topic.</p></div>
-<div class="roles-grid">
-<div class="role-card"><div class="rn">1</div><h4>Society & Culture</h4>
-<ul><li>Religious life & practices</li><li>Synagogues</li><li>Schools & education</li><li>Community organizations</li><li>Language & culture</li></ul></div>
-<div class="role-card rc-b"><div class="rn">2</div><h4>Historical Context</h4>
-<ul><li>Political environment</li><li>Economic conditions</li><li>Relations with neighbors</li><li>Major events</li></ul></div>
-<div class="role-card rc-g"><div class="rn">3</div><h4>Key Figures</h4>
-<ul><li>Rabbis & religious leaders</li><li>Intellectuals & scholars</li><li>Community organizers</li><li>Influential families</li></ul></div>
-<div class="role-card rc-a"><div class="rn">4</div><h4>Visual & Geographic</h4>
-<ul><li>Maps showing location</li><li>Historical photos</li><li>Slide design & consistency</li><li>Explain the geography</li></ul></div>
-</div>
-<div class="card" style="margin-top:14px">
-<h3>Your Responsibility</h3>
-<ul>
-<li>Find <strong>at least 2 credible sources</strong> on your topic (use the Source Bank)</li>
-<li>Fill out your section of the <strong>Research Worksheet</strong></li>
-<li>Build <strong>1-2 slides</strong> for your section of the presentation</li>
-<li>Be ready to <strong>answer questions</strong> about your research in your own words</li>
-</ul>
-</div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">03 &middot; Roles</span><span class="eb-rule"></span></div>
+    <h2>Your 4 Research Roles</h2>
+    <p>Each person takes one role and becomes the group expert on that topic.</p>
+  </div>
+
+  <div class="grid grid-4">
+    <div class="role-card">
+      <div class="num">1</div>
+      <h4>Society &amp; Culture</h4>
+      <div class="dvd"></div>
+      <ul>
+        <li>Religion &amp; synagogues</li>
+        <li>Schools &amp; yeshivot</li>
+        <li>Language (Yiddish, Ladino, Hebrew)</li>
+        <li>Food &amp; cultural traditions</li>
+        <li>Community organizations</li>
+      </ul>
+    </div>
+    <div class="role-card rc-b">
+      <div class="num">2</div>
+      <h4>Historical Context</h4>
+      <div class="dvd"></div>
+      <ul>
+        <li>Population demographics</li>
+        <li>Assimilation &amp; neighbor relations</li>
+        <li>Political environment</li>
+        <li>Economic conditions</li>
+        <li>Major events &amp; migrations</li>
+      </ul>
+    </div>
+    <div class="role-card rc-g">
+      <div class="num">3</div>
+      <h4>Key Figures</h4>
+      <div class="dvd"></div>
+      <ul>
+        <li>Rabbis &amp; religious leaders</li>
+        <li>Intellectuals &amp; scholars</li>
+        <li>Writers, artists, organizers</li>
+        <li>Influential families</li>
+        <li>Lasting impact</li>
+      </ul>
+    </div>
+    <div class="role-card rc-a">
+      <div class="num">4</div>
+      <h4>Visual &amp; Geographic</h4>
+      <div class="dvd"></div>
+      <ul>
+        <li>Where exactly in the country</li>
+        <li>Layout of the Jewish quarter</li>
+        <li>Maps of the community</li>
+        <li>Historical photos</li>
+        <li>Slide design consistency</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card has-stripe" style="margin-top:24px">
+    <h3>Your Responsibilities</h3>
+    <ul>
+      <li>Find <strong>at least 2 credible sources</strong> on your topic (use the Source Bank)</li>
+      <li>Fill out your section of the <strong>Research Worksheet</strong></li>
+      <li>Build <strong>1&ndash;2 slides</strong> for your section of the presentation</li>
+      <li>Be ready to <strong>answer questions</strong> about your research in your own words</li>
+    </ul>
+  </div>
 </div>
 
-<!-- SOURCE BANK -->
+<!-- ── SOURCE BANK ── -->
 <div id="sources" class="sec">
-<div class="sh"><h2>Source Bank</h2><p>12 communities with verified, credible, English-language sources. Go directly to these links instead of searching Google.</p></div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">04 &middot; Sources</span><span class="eb-rule"></span></div>
+    <h2>Source Bank</h2>
+    <p>Twelve communities with verified, scholarly, English-language sources. Skip Google &mdash; start here.</p>
+  </div>
 
-<div class="tip warn">
-<strong>How to use this:</strong>
-<p>Pick your community, then open the links below. Each source is labeled by what kind of information it has. Every role should be able to find what they need from 2-3 of these links.</p>
+  <div class="tip warn">
+    <strong>How to use this.</strong>
+    <p>Pick your community, then open the links below. Each source is labeled by what kind of information it has and which role it best serves. Every role should find what they need from 2&ndash;3 of these links.</p>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Universal &middot; Any Community</div>
+    <h4>Works for Any Community</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia of Jews in Eastern Europe</strong> &mdash; Scholarly articles on most Eastern European communities. Search by city name.<br><a href="https://yivoencyclopedia.org" target="_blank">yivoencyclopedia.org</a></div>
+    <div class="source-item"><strong>Yad Vashem Community Pages</strong> &mdash; Community histories with photos and maps.<br><a href="https://www.yadvashem.org/communities.html" target="_blank">yadvashem.org/communities</a></div>
+    <div class="source-item"><strong>USHMM Holocaust Encyclopedia</strong> &mdash; Historical overviews with context on political and economic conditions.<br><a href="https://encyclopedia.ushmm.org" target="_blank">encyclopedia.ushmm.org</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library</strong> &mdash; Good overviews of communities, leaders, and institutions.<br><a href="https://www.jewishvirtuallibrary.org" target="_blank">jewishvirtuallibrary.org</a></div>
+    <div class="source-item"><strong>JewishGen Communities Database</strong> &mdash; Population data, maps, and Yizkor book references.<br><a href="https://www.jewishgen.org/Communities/" target="_blank">jewishgen.org/Communities</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Lithuania</div>
+    <h4>Vilna (Vilnius)</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia: Vilnius</strong> &mdash; Full scholarly article covering history, institutions, population, culture, politics, key figures. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Vilnius" target="_blank">yivoencyclopedia.org/article.aspx/Vilnius</a></div>
+    <div class="source-item"><strong>Yad Vashem: Story of the Jewish Community of Vilna</strong> &mdash; Overview with photos, maps, cultural and religious life. <em>Society &amp; Culture, Visual.</em><br><a href="https://www.yadvashem.org/vilna/" target="_blank">yadvashem.org/vilna</a></div>
+    <div class="source-item"><strong>YIVO Online Museum: Jewish Vilna</strong> &mdash; Photos, film clips, posters, and artifacts. <em>Visual &amp; Geographic.</em><br><a href="https://museum.yivo.org/experiences/jewish-vilna/" target="_blank">museum.yivo.org/experiences/jewish-vilna</a></div>
+    <div class="source-item"><strong>Yad Vashem: Vilna Interwar Culture</strong> &mdash; YIVO founding, Yiddish culture, schools, intellectual life. <em>Society &amp; Culture, Key Figures.</em><br><a href="https://www.yadvashem.org/vilna/interwar-period/culture/yivo.html" target="_blank">yadvashem.org/vilna/interwar-period/culture</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Greece</div>
+    <h4>Salonika (Thessaloniki)</h4>
+    <div class="source-item"><strong>USHMM: Salonika</strong> &mdash; Overview of the community, size, institutions, and what happened under occupation. <em>Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/salonika" target="_blank">encyclopedia.ushmm.org/content/en/article/salonika</a></div>
+    <div class="source-item"><strong>Aish.com: Jewish History of Thessaloniki</strong> &mdash; Detailed history from ancient times through the Sephardic golden age, schools, rabbis, and institutions. <em>All roles.</em><br><a href="https://aish.com/jewish-history-of-thessaloniki-salonika/" target="_blank">aish.com/jewish-history-of-thessaloniki-salonika</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Salonika</strong> &mdash; Population data, economic life, cultural overview. <em>Historical Context, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/salonika" target="_blank">jewishvirtuallibrary.org/salonika</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Poland</div>
+    <h4>Warsaw</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia: Warsaw</strong> &mdash; Comprehensive article on Jewish Warsaw: politics, culture, Yiddish press, education, movements. <em>All roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Warsaw" target="_blank">yivoencyclopedia.org/article.aspx/Warsaw</a></div>
+    <div class="source-item"><strong>POLIN Museum: Virtual Shtetl</strong> &mdash; Interactive resources on Polish Jewish communities. <em>Visual &amp; Geographic, Society &amp; Culture.</em><br><a href="https://sztetl.org.pl/en" target="_blank">sztetl.org.pl/en</a></div>
+    <div class="source-item"><strong>Yiddish Book Center: Jewish Warsaw</strong> &mdash; Oral histories and cultural context of prewar Warsaw. <em>Society &amp; Culture, Key Figures.</em><br><a href="https://www.yiddishbookcenter.org/language-literature-culture/wexler-oral-history-project-films-features-news/features/jewish-1" target="_blank">yiddishbookcenter.org (Warsaw feature)</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Hungary</div>
+    <h4>Budapest</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia: Budapest</strong> &mdash; Jewish intellectual and business life, assimilation, religious institutions, politics. <em>All roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Budapest" target="_blank">yivoencyclopedia.org/article.aspx/Budapest</a></div>
+    <div class="source-item"><strong>USHMM: Hungary Before the German Occupation</strong> &mdash; Political context, anti-Jewish laws, economic conditions. <em>Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/hungary-before-the-german-occupation" target="_blank">encyclopedia.ushmm.org (Hungary)</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Budapest</strong> &mdash; Overview of the community, synagogues, demographics. <em>Society &amp; Culture, Visual.</em><br><a href="https://www.jewishvirtuallibrary.org/budapest" target="_blank">jewishvirtuallibrary.org/budapest</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Netherlands</div>
+    <h4>Amsterdam</h4>
+    <div class="source-item"><strong>USHMM: The Netherlands</strong> &mdash; Historical context, Jewish community structure, and wartime events. <em>Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/the-netherlands" target="_blank">encyclopedia.ushmm.org (Netherlands)</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Amsterdam</strong> &mdash; Sephardic and Ashkenazi communities, Portuguese Synagogue, cultural life. <em>Society &amp; Culture, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/amsterdam" target="_blank">jewishvirtuallibrary.org/amsterdam</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Czech Republic</div>
+    <h4>Prague</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia: Prague</strong> &mdash; History of one of Europe's oldest Jewish communities, the Maharal, Altneuschul. <em>All roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Prague" target="_blank">yivoencyclopedia.org/article.aspx/Prague</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Prague</strong> &mdash; Demographics, institutions, key figures, the old Jewish quarter. <em>Visual &amp; Geographic, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/prague" target="_blank">jewishvirtuallibrary.org/prague</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Poland</div>
+    <h4>Krak&oacute;w</h4>
+    <div class="source-item"><strong>YIVO Encyclopedia: Krak&oacute;w</strong> &mdash; Kazimierz district, religious life, intellectual history, and economic conditions. <em>All roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Krakow" target="_blank">yivoencyclopedia.org/article.aspx/Krakow</a></div>
+    <div class="source-item"><strong>POLIN Museum: Krak&oacute;w</strong> &mdash; Resources on the Kazimierz Jewish quarter and community life. <em>Visual &amp; Geographic.</em><br><a href="https://sztetl.org.pl/en/towns/k/449-krakow" target="_blank">sztetl.org.pl (Krak&oacute;w)</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Germany</div>
+    <h4>Berlin</h4>
+    <div class="source-item"><strong>USHMM: Berlin</strong> &mdash; Jewish community before and during the Nazi era, including institutional life. <em>Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/berlin" target="_blank">encyclopedia.ushmm.org (Berlin)</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Berlin</strong> &mdash; Haskalah, Reform Judaism origins, community institutions, key figures like Moses Mendelssohn. <em>Key Figures, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/berlin" target="_blank">jewishvirtuallibrary.org/berlin</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Ukraine</div>
+    <h4>Kiev (Kyiv)</h4>
+    <div class="source-item"><strong>Yad Vashem: History of the Jews of Kiev</strong> &mdash; Detailed timeline from earliest settlement through 1941, covering institutions, pogroms, culture, the Beilis trial, and the Yiddish golden age of the 1920s&ndash;30s. <em>All roles.</em><br><a href="https://www.yadvashem.org/education/educational-materials/lesson-plans/babi-yar/historical-background2.html" target="_blank">yadvashem.org (Kiev timeline)</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Kiev</strong> &mdash; Overview of the community, population growth, key institutions, and political context. <em>Historical Context, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/kiev" target="_blank">jewishvirtuallibrary.org/kiev</a></div>
+    <div class="source-item"><strong>Jewish Encyclopedia: Kiev</strong> &mdash; Deep historical article covering medieval origins, economic life, religious scholars, and community governance. <em>Key Figures, Historical Context.</em><br><a href="http://www.jewishencyclopedia.com/articles/9314-kiev" target="_blank">jewishencyclopedia.com/kiev</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Italy</div>
+    <h4>Rome</h4>
+    <div class="source-item"><strong>Aish.com: The Jewish History of Rome</strong> &mdash; Comprehensive overview from 161 BCE through modern day. Covers the ghetto, synagogues, key figures, Nusach Italki. <em>All roles.</em><br><a href="https://aish.com/the-jewish-history-of-rome/" target="_blank">aish.com/the-jewish-history-of-rome</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Rome</strong> &mdash; Detailed tour-style article covering institutions, synagogues, the papal ghetto (1555&ndash;1870). <em>Society &amp; Culture, Visual &amp; Geographic.</em><br><a href="https://www.jewishvirtuallibrary.org/rome-jewish-history-tour" target="_blank">jewishvirtuallibrary.org/rome</a></div>
+    <div class="source-item"><strong>Jewish Community of Rome Official Site</strong> &mdash; History from the community itself, covering 2,000 years of continuous Jewish life. <em>Historical Context, Key Figures.</em><br><a href="https://romaebraica.it/en/history/" target="_blank">romaebraica.it/en/history</a></div>
+    <div class="source-item"><strong>My Jewish Learning: Roman Jews</strong> &mdash; The ghetto years, five secret synagogues under one roof, Italkim identity. <em>Society &amp; Culture.</em><br><a href="https://www.myjewishlearning.com/article/roman-jews/" target="_blank">myjewishlearning.com/roman-jews</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">Italy</div>
+    <h4>Venice</h4>
+    <div class="source-item"><strong>Jewish Virtual Library: Venice</strong> &mdash; History of the community, the original ghetto (1516), five synagogues, economic life, and key figures. <em>All roles.</em><br><a href="https://jewishvirtuallibrary.org/venice-italy-jewish-history-tour" target="_blank">jewishvirtuallibrary.org/venice</a></div>
+    <div class="source-item"><strong>Jewish Venice (Official Community Site)</strong> &mdash; History, culture, the five synagogues, maps and photos. <em>Visual &amp; Geographic, Society &amp; Culture.</em><br><a href="https://www.jewishvenice.org/history-culture/" target="_blank">jewishvenice.org/history-culture</a></div>
+    <div class="source-item"><strong>Ghetto of Venice Official Site</strong> &mdash; The original ghetto's history, architecture, synagogues, museum. <em>Visual &amp; Geographic.</em><br><a href="https://www.ghettovenezia.com/en/" target="_blank">ghettovenezia.com</a></div>
+  </div>
+
+  <div class="sources-block has-stripe">
+    <div class="country-tag">France</div>
+    <h4>Paris</h4>
+    <div class="source-item"><strong>USHMM: Paris</strong> &mdash; Jewish life before WW2, the Marais district, community institutions, the immigrant wave of the 1920s&ndash;30s. <em>Historical Context, Society &amp; Culture.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/paris" target="_blank">encyclopedia.ushmm.org (Paris)</a></div>
+    <div class="source-item"><strong>USHMM: France</strong> &mdash; Broader context on French Jewish life, the interwar period, and the diverse community (native French Jews vs. immigrants). <em>Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/france" target="_blank">encyclopedia.ushmm.org (France)</a></div>
+    <div class="source-item"><strong>Jewish Virtual Library: Paris</strong> &mdash; Overview of the community, synagogues, cultural life, and institutions. <em>Society &amp; Culture, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/paris" target="_blank">jewishvirtuallibrary.org/paris</a></div>
+    <div class="source-item"><strong>Yad Vashem: From Democracy to Deportation</strong> &mdash; French Jewish history from emancipation through WWII. <em>Historical Context.</em><br><a href="https://www.yadvashem.org/articles/general/from-democracy-to-deportation.html" target="_blank">yadvashem.org (France)</a></div>
+  </div>
+
+  <div class="tip">
+    <strong>Want a different community?</strong>
+    <p>Check with your teacher first. If you go with a community not listed here, make sure you can find at least 2 credible English-language sources per role. Start with the YIVO Encyclopedia and Yad Vashem &mdash; they cover hundreds of communities.</p>
+  </div>
 </div>
 
-<!-- GENERAL -->
-<div class="card">
-<h3>Works for Any Community</h3>
-<div class="source-item"><strong>YIVO Encyclopedia of Jews in Eastern Europe</strong> -- Scholarly articles on most Eastern European communities. Search by city name.<br><a href="https://yivoencyclopedia.org" target="_blank">yivoencyclopedia.org</a></div>
-<div class="source-item"><strong>Yad Vashem Community Pages</strong> -- Community histories with photos and maps.<br><a href="https://www.yadvashem.org/communities.html" target="_blank">yadvashem.org/communities</a></div>
-<div class="source-item"><strong>USHMM Holocaust Encyclopedia</strong> -- Historical overviews with context on political and economic conditions.<br><a href="https://encyclopedia.ushmm.org" target="_blank">encyclopedia.ushmm.org</a></div>
-<div class="source-item"><strong>Jewish Virtual Library</strong> -- Good overviews of communities, leaders, and institutions.<br><a href="https://www.jewishvirtuallibrary.org" target="_blank">jewishvirtuallibrary.org</a></div>
-<div class="source-item"><strong>JewishGen Communities Database</strong> -- Population data, maps, and Yizkor book references.<br><a href="https://www.jewishgen.org/Communities/" target="_blank">jewishgen.org/Communities</a></div>
-</div>
-
-<!-- VILNA -->
-<div class="source-group"><h4>Vilna (Vilnius), Lithuania</h4>
-<div class="card">
-<div class="source-item"><strong>YIVO Encyclopedia: Vilnius</strong> -- Full scholarly article covering history, institutions, population, culture, politics, key figures. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Vilnius" target="_blank">yivoencyclopedia.org/article.aspx/Vilnius</a></div>
-<div class="source-item"><strong>Yad Vashem: Story of the Jewish Community of Vilna</strong> -- Overview with photos, maps, cultural and religious life. <em>Good for Society &amp; Culture, Visual.</em><br><a href="https://www.yadvashem.org/vilna/" target="_blank">yadvashem.org/vilna</a></div>
-<div class="source-item"><strong>YIVO Online Museum: Jewish Vilna</strong> -- Photos, film clips, posters, and artifacts from Jewish Vilna. <em>Good for Visual &amp; Geographic.</em><br><a href="https://museum.yivo.org/experiences/jewish-vilna/" target="_blank">museum.yivo.org/experiences/jewish-vilna</a></div>
-<div class="source-item"><strong>Yad Vashem: Vilna Interwar Culture</strong> -- YIVO founding, Yiddish culture, schools, intellectual life. <em>Good for Society &amp; Culture, Key Figures.</em><br><a href="https://www.yadvashem.org/vilna/interwar-period/culture/yivo.html" target="_blank">yadvashem.org/vilna/interwar-period/culture</a></div>
-</div></div>
-
-<!-- SALONIKA -->
-<div class="source-group"><h4>Salonika (Thessaloniki), Greece</h4>
-<div class="card">
-<div class="source-item"><strong>USHMM: Salonika</strong> -- Overview of the community, size, institutions, and what happened under occupation. <em>Good for Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/salonika" target="_blank">encyclopedia.ushmm.org/content/en/article/salonika</a></div>
-<div class="source-item"><strong>Aish.com: Jewish History of Thessaloniki</strong> -- Detailed history from ancient times through the Sephardic golden age, schools, rabbis, and institutions. <em>Good for all roles.</em><br><a href="https://aish.com/jewish-history-of-thessaloniki-salonika/" target="_blank">aish.com/jewish-history-of-thessaloniki-salonika</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Salonika</strong> -- Population data, economic life, cultural overview. <em>Good for Historical Context, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/salonika" target="_blank">jewishvirtuallibrary.org/salonika</a></div>
-</div></div>
-
-<!-- WARSAW -->
-<div class="source-group"><h4>Warsaw, Poland</h4>
-<div class="card">
-<div class="source-item"><strong>YIVO Encyclopedia: Warsaw</strong> -- Comprehensive article on Jewish Warsaw: politics, culture, Yiddish press, education, movements. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Warsaw" target="_blank">yivoencyclopedia.org/article.aspx/Warsaw</a></div>
-<div class="source-item"><strong>POLIN Museum: Virtual Shtetl</strong> -- Interactive resources on Polish Jewish communities. <em>Good for Visual &amp; Geographic, Society &amp; Culture.</em><br><a href="https://sztetl.org.pl/en" target="_blank">sztetl.org.pl/en</a></div>
-<div class="source-item"><strong>Yiddish Book Center: Jewish Warsaw</strong> -- Oral histories and cultural context of prewar Warsaw. <em>Good for Society &amp; Culture, Key Figures.</em><br><a href="https://www.yiddishbookcenter.org/language-literature-culture/wexler-oral-history-project-films-features-news/features/jewish-1" target="_blank">yiddishbookcenter.org (Warsaw feature)</a></div>
-</div></div>
-
-<!-- BUDAPEST -->
-<div class="source-group"><h4>Budapest, Hungary</h4>
-<div class="card">
-<div class="source-item"><strong>YIVO Encyclopedia: Budapest</strong> -- Jewish intellectual and business life, assimilation, religious institutions, politics. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Budapest" target="_blank">yivoencyclopedia.org/article.aspx/Budapest</a></div>
-<div class="source-item"><strong>USHMM: Hungary Before the German Occupation</strong> -- Political context, anti-Jewish laws, economic conditions. <em>Good for Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/hungary-before-the-german-occupation" target="_blank">encyclopedia.ushmm.org (Hungary)</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Budapest</strong> -- Overview of the community, synagogues, demographics. <em>Good for Society &amp; Culture, Visual.</em><br><a href="https://www.jewishvirtuallibrary.org/budapest" target="_blank">jewishvirtuallibrary.org/budapest</a></div>
-</div></div>
-
-<!-- AMSTERDAM -->
-<div class="source-group"><h4>Amsterdam, Netherlands</h4>
-<div class="card">
-<div class="source-item"><strong>USHMM: The Netherlands</strong> -- Historical context, Jewish community structure, and wartime events. <em>Good for Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/the-netherlands" target="_blank">encyclopedia.ushmm.org (Netherlands)</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Amsterdam</strong> -- Sephardic and Ashkenazi communities, Portuguese Synagogue, cultural life. <em>Good for Society &amp; Culture, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/amsterdam" target="_blank">jewishvirtuallibrary.org/amsterdam</a></div>
-</div></div>
-
-<!-- PRAGUE -->
-<div class="source-group"><h4>Prague, Czech Republic</h4>
-<div class="card">
-<div class="source-item"><strong>YIVO Encyclopedia: Prague</strong> -- History of one of Europe's oldest Jewish communities, the Maharal, Altneuschul. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Prague" target="_blank">yivoencyclopedia.org/article.aspx/Prague</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Prague</strong> -- Demographics, institutions, key figures, the old Jewish quarter. <em>Good for Visual &amp; Geographic, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/prague" target="_blank">jewishvirtuallibrary.org/prague</a></div>
-</div></div>
-
-<!-- KRAKOW -->
-<div class="source-group"><h4>Krak&oacute;w, Poland</h4>
-<div class="card">
-<div class="source-item"><strong>YIVO Encyclopedia: Krak&oacute;w</strong> -- Kazimierz district, religious life, intellectual history, and economic conditions. <em>Good for all roles.</em><br><a href="https://yivoencyclopedia.org/article.aspx/Krakow" target="_blank">yivoencyclopedia.org/article.aspx/Krakow</a></div>
-<div class="source-item"><strong>POLIN Museum: Krak&oacute;w</strong> -- Resources on the Kazimierz Jewish quarter and community life. <em>Good for Visual &amp; Geographic.</em><br><a href="https://sztetl.org.pl/en/towns/k/449-krakow" target="_blank">sztetl.org.pl (Krak&oacute;w)</a></div>
-</div></div>
-
-<!-- BERLIN -->
-<div class="source-group"><h4>Berlin, Germany</h4>
-<div class="card">
-<div class="source-item"><strong>USHMM: Berlin</strong> -- Jewish community before and during the Nazi era, including institutional life. <em>Good for Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/berlin" target="_blank">encyclopedia.ushmm.org (Berlin)</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Berlin</strong> -- Haskalah, Reform Judaism origins, community institutions, key figures like Moses Mendelssohn. <em>Good for Key Figures, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/berlin" target="_blank">jewishvirtuallibrary.org/berlin</a></div>
-</div></div>
-
-<!-- KIEV -->
-<div class="source-group"><h4>Kiev (Kyiv), Ukraine</h4>
-<div class="card">
-<div class="source-item"><strong>Yad Vashem: History of the Jews of Kiev</strong> -- Detailed timeline from earliest settlement through 1941, covering institutions, pogroms, culture, the Beilis trial, and the Yiddish golden age of the 1920s-30s. <em>Good for all roles.</em><br><a href="https://www.yadvashem.org/education/educational-materials/lesson-plans/babi-yar/historical-background2.html" target="_blank">yadvashem.org (Kiev timeline)</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Kiev</strong> -- Overview of the community, population growth, key institutions, and political context. <em>Good for Historical Context, Society &amp; Culture.</em><br><a href="https://www.jewishvirtuallibrary.org/kiev" target="_blank">jewishvirtuallibrary.org/kiev</a></div>
-<div class="source-item"><strong>Jewish Encyclopedia: Kiev</strong> -- Deep historical article covering medieval origins, economic life, religious scholars, and community governance. <em>Good for Key Figures, Historical Context.</em><br><a href="http://www.jewishencyclopedia.com/articles/9314-kiev" target="_blank">jewishencyclopedia.com/kiev</a></div>
-</div></div>
-
-<!-- ROME -->
-<div class="source-group"><h4>Rome, Italy</h4>
-<div class="card">
-<div class="source-item"><strong>Aish.com: The Jewish History of Rome</strong> -- Comprehensive overview from 161 BCE through modern day. Covers the ghetto, synagogues, key figures, Nusach Italki, and the community's unique identity. <em>Good for all roles.</em><br><a href="https://aish.com/the-jewish-history-of-rome/" target="_blank">aish.com/the-jewish-history-of-rome</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Rome</strong> -- Detailed tour-style article covering institutions, synagogues, the papal ghetto (1555-1870), and community development. <em>Good for Society &amp; Culture, Visual &amp; Geographic.</em><br><a href="https://www.jewishvirtuallibrary.org/rome-jewish-history-tour" target="_blank">jewishvirtuallibrary.org/rome</a></div>
-<div class="source-item"><strong>Jewish Community of Rome Official Site</strong> -- History from the community itself, covering 2,000 years of continuous Jewish life. <em>Good for Historical Context, Key Figures.</em><br><a href="https://romaebraica.it/en/history/" target="_blank">romaebraica.it/en/history</a></div>
-<div class="source-item"><strong>My Jewish Learning: Roman Jews</strong> -- The ghetto years, five secret synagogues under one roof, Italkim identity, and modern community life. <em>Good for Society &amp; Culture.</em><br><a href="https://www.myjewishlearning.com/article/roman-jews/" target="_blank">myjewishlearning.com/roman-jews</a></div>
-</div></div>
-
-<!-- VENICE -->
-<div class="source-group"><h4>Venice, Italy</h4>
-<div class="card">
-<div class="source-item"><strong>Jewish Virtual Library: Venice</strong> -- History of the community, the original ghetto (1516), five synagogues, economic life, and key figures. <em>Good for all roles.</em><br><a href="https://jewishvirtuallibrary.org/venice-italy-jewish-history-tour" target="_blank">jewishvirtuallibrary.org/venice</a></div>
-<div class="source-item"><strong>Jewish Venice (Official Community Site)</strong> -- History, culture, the five synagogues, maps and photos. <em>Good for Visual &amp; Geographic, Society &amp; Culture.</em><br><a href="https://www.jewishvenice.org/history-culture/" target="_blank">jewishvenice.org/history-culture</a></div>
-<div class="source-item"><strong>Ghetto of Venice Official Site</strong> -- The original ghetto's history, architecture, synagogues, museum. Includes photos and layout descriptions. <em>Good for Visual &amp; Geographic.</em><br><a href="https://www.ghettovenezia.com/en/" target="_blank">ghettovenezia.com</a></div>
-</div></div>
-
-<!-- PARIS -->
-<div class="source-group"><h4>Paris, France</h4>
-<div class="card">
-<div class="source-item"><strong>USHMM: Paris</strong> -- Jewish life before WW2, the Marais district, community institutions, and the immigrant wave of the 1920s-30s. <em>Good for Historical Context, Society &amp; Culture.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/paris" target="_blank">encyclopedia.ushmm.org (Paris)</a></div>
-<div class="source-item"><strong>USHMM: France</strong> -- Broader context on French Jewish life, the interwar period, and the diverse community (native French Jews vs. immigrants). <em>Good for Historical Context.</em><br><a href="https://encyclopedia.ushmm.org/content/en/article/france" target="_blank">encyclopedia.ushmm.org (France)</a></div>
-<div class="source-item"><strong>Jewish Virtual Library: Paris</strong> -- Overview of the community, synagogues, cultural life, and institutions. <em>Good for Society &amp; Culture, Key Figures.</em><br><a href="https://www.jewishvirtuallibrary.org/paris" target="_blank">jewishvirtuallibrary.org/paris</a></div>
-<div class="source-item"><strong>Yad Vashem: From Democracy to Deportation</strong> -- French Jewish history from emancipation through WWII. Good on the diversity of the community and institutional life. <em>Good for Historical Context.</em><br><a href="https://www.yadvashem.org/articles/general/from-democracy-to-deportation.html" target="_blank">yadvashem.org (France)</a></div>
-</div></div>
-
-<div class="tip">
-<strong>Want to pick a different community?</strong>
-<p>Check with your teacher first. If you go with a community not listed here, make sure you can find at least 2 credible English-language sources per role. Start with the YIVO Encyclopedia and Yad Vashem -- they cover hundreds of communities.</p>
-</div>
-</div>
-
-<!-- RUBRIC -->
+<!-- ── RUBRIC ── -->
 <div id="rubric" class="sec">
-<div class="sh"><h2>Grading Rubric</h2><p>Two parts: group grade + individual grade. Total: 100 points.</p></div>
-<div class="card">
-<h3>Group Grade (60 points)</h3>
-<table class="rtable">
-<thead><tr><th>Category</th><th>What We Are Looking For</th><th class="pts">Pts</th></tr></thead>
-<tbody>
-<tr><td><strong>Historical Accuracy</strong></td><td>Information is correct, specific, and clearly based on sources.</td><td class="pts">15</td></tr>
-<tr><td><strong>Depth of Research</strong></td><td>Goes beyond surface-level facts. Shows real understanding of the community.</td><td class="pts">15</td></tr>
-<tr><td><strong>Presentation Organization</strong></td><td>Clear structure, logical flow. Audience can follow the story.</td><td class="pts">10</td></tr>
-<tr><td><strong>Visuals & Slides</strong></td><td>At least 1 map and 1-2 photos. Clean slides, no walls of text.</td><td class="pts">10</td></tr>
-<tr><td><strong>Research Worksheets</strong></td><td>All 4 worksheets submitted, filled out with sources listed.</td><td class="pts">10</td></tr>
-</tbody>
-</table>
-</div>
-<div class="card">
-<h3>Individual Grade (40 points)</h3>
-<table class="rtable">
-<thead><tr><th>Category</th><th>What We Are Looking For</th><th class="pts">Pts</th></tr></thead>
-<tbody>
-<tr><td><strong>Understanding</strong></td><td>Can explain your research in your own words. Not reading from slides.</td><td class="pts">15</td></tr>
-<tr><td><strong>Q&A Answers</strong></td><td>Answers teacher questions thoughtfully. Shows real engagement.</td><td class="pts">15</td></tr>
-<tr><td><strong>Role Fulfillment</strong></td><td>Clearly contributed to your assigned role. Your section has substance.</td><td class="pts">10</td></tr>
-</tbody>
-</table>
-</div>
-<div class="tip warn">
-<strong>40% of your grade is individual.</strong>
-<p>Even if your group does great, you need to understand your own research. If you cannot explain what you found during Q&amp;A, it will cost you.</p>
-</div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">05 &middot; Grading</span><span class="eb-rule"></span></div>
+    <h2>Grading Rubric</h2>
+    <p>Two parts: 60-point group grade plus 40-point individual grade. Total 100 points.</p>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">Group Grade &middot; 60 Points</span><span class="eb-rule"></span></div>
+    <h3>Same score for all group members</h3>
+  </div>
+  <div class="rubric">
+    <div class="rubric-row">
+      <div class="pts">15 <span>pts</span></div>
+      <div class="cat">Historical Accuracy</div>
+      <div class="desc">Information is correct, specific, and clearly drawn from credible sources.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">15 <span>pts</span></div>
+      <div class="cat">Depth of Research</div>
+      <div class="desc">Goes beyond basic facts. Explains why things mattered. Specific details.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">10 <span>pts</span></div>
+      <div class="cat">Presentation Organization</div>
+      <div class="desc">Clear structure, logical flow. Audience can follow the story.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">10 <span>pts</span></div>
+      <div class="cat">Visuals &amp; Slides</div>
+      <div class="desc">Clean slides, 1+ map and 1&ndash;2 photos, no walls of text, consistent design.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">10 <span>pts</span></div>
+      <div class="cat">Research Worksheets</div>
+      <div class="desc">All 4 worksheets submitted, fully completed with sources listed.</div>
+    </div>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">Individual Grade &middot; 40 Points</span><span class="eb-rule"></span></div>
+    <h3>Each student is scored on their own performance</h3>
+  </div>
+  <div class="rubric indiv">
+    <div class="rubric-row">
+      <div class="pts">15 <span>pts</span></div>
+      <div class="cat">Understanding of Material</div>
+      <div class="desc">Speaks confidently about your research without reading from slides or notes.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">15 <span>pts</span></div>
+      <div class="cat">Q&amp;A Answers</div>
+      <div class="desc">Answers teacher questions thoughtfully. Explains why things mattered.</div>
+    </div>
+    <div class="rubric-row">
+      <div class="pts">10 <span>pts</span></div>
+      <div class="cat">Role Fulfillment</div>
+      <div class="desc">Clearly owned your assigned role. Your section has substance and specificity.</div>
+    </div>
+  </div>
+
+  <div class="tip danger">
+    <strong>40% of your grade depends on YOU.</strong>
+    <p>Even if your group does great work, you can lose 40 points if you can't explain your own research during Q&amp;A. Know your section cold.</p>
+  </div>
 </div>
 
-<!-- SLIDES & QA -->
+<!-- ── SLIDES &amp; Q&A ── -->
 <div id="slides" class="sec">
-<div class="sh"><h2>Slides & Q&A</h2><p>How to build your deck and prepare for questions.</p></div>
-<div class="card">
-<h3>Slide Structure (7 slides)</h3>
-<ol>
-<li><strong>Title</strong> -- Community name, location, group members</li>
-<li><strong>Overview</strong> -- Where, how large, when</li>
-<li><strong>Historical Context</strong> -- Political, economic, major events</li>
-<li><strong>Daily Life</strong> -- Religious life, schools, organizations, culture</li>
-<li><strong>Key Figures</strong> -- Important people and why they mattered</li>
-<li><strong>Map & Visuals</strong> -- At least one map + a historical photo</li>
-<li><strong>Conclusion</strong> -- What made this community unique</li>
-</ol>
-</div>
-<div class="card">
-<h3>Slide Rules</h3>
-<ul>
-<li><strong>Max 5 lines of text per slide.</strong> If you have more, cut it.</li>
-<li><strong>Font size: 24pt minimum</strong> for body text.</li>
-<li><strong>Do not read your slides.</strong> Slides are visual support. You speak from knowledge.</li>
-<li><strong>Consistent design.</strong> Same font, same colors, same layout. The Visual Specialist checks this.</li>
-<li><strong>Include at least 1 map and 1 photo.</strong> The Source Bank has links to image archives.</li>
-</ul>
-</div>
-<div class="card">
-<h3>Q&A Prep (2-3 questions per group)</h3>
-<p>After your 5-minute presentation, the teacher will ask 2-3 quick questions. These are not meant to trick you. They confirm you understand what you researched. Questions may include:</p>
-<ul>
-<li>What was this community known for?</li>
-<li>Why was it located where it was?</li>
-<li>What institutions were most important to Jewish life there?</li>
-<li>Who was an important figure and why?</li>
-<li>What surprised you about this community?</li>
-<li>How was it different from other Jewish communities?</li>
-</ul>
-<p style="margin-top:8px"><strong>Best prep:</strong> Write a 3-sentence summary of your research from memory. If you can do that, you are ready.</p>
-</div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">06 &middot; Your Slides</span><span class="eb-rule"></span></div>
+    <h2>Build a 7-Slide Deck (+ Bibliography)</h2>
+    <p>Same structure for every group. The bibliography is the 8th slide and is required.</p>
+  </div>
+
+  <div class="slide-spec">
+    <div class="slide-spec-row"><div class="n">01</div><div class="t">Title</div><div class="d">Community name &middot; location &middot; group members</div></div>
+    <div class="slide-spec-row"><div class="n">02</div><div class="t">Overview</div><div class="d">Where, how large, when &mdash; population and dates</div></div>
+    <div class="slide-spec-row"><div class="n">03</div><div class="t">Historical Context</div><div class="d">Political environment &middot; economy &middot; major events</div></div>
+    <div class="slide-spec-row"><div class="n">04</div><div class="t">Daily Life</div><div class="d">Religion &middot; schools &middot; language &middot; food &middot; cultural life</div></div>
+    <div class="slide-spec-row"><div class="n">05</div><div class="t">Key Figures</div><div class="d">Important people and why they mattered</div></div>
+    <div class="slide-spec-row"><div class="n">06</div><div class="t">Map &amp; Visuals</div><div class="d">At least one map plus a historical photo</div></div>
+    <div class="slide-spec-row"><div class="n">07</div><div class="t">Conclusion</div><div class="d">What made this community distinctive</div></div>
+    <div class="slide-spec-row bib"><div class="n">08</div><div class="t">Bibliography</div><div class="d">Every source the group used &mdash; REQUIRED</div></div>
+  </div>
+
+  <div class="card has-stripe stripe-b">
+    <h3>Slide Rules</h3>
+    <ul>
+      <li><strong>Max 5 lines of text per slide.</strong> If you have more, cut it.</li>
+      <li><strong>Body text: 24pt minimum.</strong> No walls of text.</li>
+      <li><strong>Don't read your slides.</strong> Slides are visual support &mdash; you speak from knowledge.</li>
+      <li><strong>Consistent design.</strong> Same font, same colors, same layout. The Visual Specialist checks this.</li>
+      <li><strong>At least 1 map and 1 photo.</strong> The Source Bank links to image archives.</li>
+    </ul>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">Q&amp;A Preparation</span><span class="eb-rule"></span></div>
+    <h3>Prepare for the 5-Minute Q&amp;A</h3>
+    <p>After your presentation, the teacher asks 2&ndash;3 quick questions. They are not meant to trick you &mdash; they confirm you understand your research.</p>
+  </div>
+
+  <div class="card has-stripe">
+    <h3>Example Questions</h3>
+    <ul>
+      <li>What was this community known for?</li>
+      <li>Why was it located where it was?</li>
+      <li>What institutions mattered most to Jewish life there?</li>
+      <li>Who was an important figure and why?</li>
+      <li>What surprised you about this community?</li>
+      <li>How was it different from other Jewish communities?</li>
+    </ul>
+    <p style="margin-top:14px"><strong>Best prep:</strong> Close your laptop. Without looking at slides or worksheet, can you summarize your community's history, daily life, and significance in three sentences? If yes, you are ready.</p>
+  </div>
 </div>
 
-<!-- AI POLICY -->
+<!-- ── AI POLICY ── -->
 <div id="ai" class="sec">
-<div class="sh"><h2>AI Policy</h2><p>Honest rules for using AI on this project.</p></div>
+  <div class="sh">
+    <div class="eb"><span class="eyebrow">07 &middot; AI Policy</span><span class="eb-rule"></span></div>
+    <h2>Honest Rules for Using AI</h2>
+    <p>AI is a tool. Use it. But the Q&amp;A confirms you understand your work &mdash; and no tool can answer for you.</p>
+  </div>
 
-<div class="card">
-<h3>The Bottom Line</h3>
-<p>AI is a tool. You can use it. But the Q&amp;A after your presentation is worth <strong>30 points</strong>, and no tool can answer for you. If you do not understand what is on your slides, it will be obvious in about 15 seconds of questioning.</p>
+  <div class="card has-stripe">
+    <h3>The Bottom Line</h3>
+    <p>AI can help you <strong>present</strong> your work. It should not <strong>do</strong> your work. The Q&amp;A is worth 30 points, and if you do not understand what is on your slides, it will be obvious in about 15 seconds of questioning.</p>
+  </div>
+
+  <div class="ai-cols">
+    <div class="ai-col">
+      <div class="label">Go Ahead</div>
+      <h3>AI can help you...</h3>
+      <ul>
+        <li>Improve slide design and formatting</li>
+        <li>Explain a term or concept you don't know</li>
+        <li>Brainstorm research questions or organize notes</li>
+        <li>Find sources (then go read the actual source yourself)</li>
+        <li>Clean up grammar on text you already wrote</li>
+      </ul>
+    </div>
+    <div class="ai-col ai-no">
+      <div class="label">Do Your Own Thinking</div>
+      <h3>AI should NOT...</h3>
+      <ul>
+        <li>Write your worksheet answers for you</li>
+        <li>Summarize sources instead of you reading them</li>
+        <li>Generate the historical content on your slides</li>
+        <li>Form your conclusions about the community</li>
+        <li>Answer your Q&amp;A questions on the spot</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip danger">
+    <strong>Why this matters.</strong>
+    <p>After your presentation, you answer questions in your own words, on the spot. That is 30 of your 100 points. Students who did their own research will handle this easily. Students who had AI do the thinking for them will not.</p>
+  </div>
 </div>
 
-<div class="card" style="border-left:4px solid var(--green)">
-<h3 style="color:var(--green)">Go Ahead</h3>
-<ul>
-<li>Use AI to make your slides look good (design, layout, formatting)</li>
-<li>Ask AI to explain a term or concept you do not understand</li>
-<li>Use AI to brainstorm research questions or organize your notes</li>
-<li>Ask AI to help you find sources (then go read the actual source yourself)</li>
-<li>Use AI to clean up grammar or spelling on text you already wrote</li>
-</ul>
 </div>
 
-<div class="card" style="border-left:4px solid var(--accent)">
-<h3 style="color:var(--accent)">Do Your Own Thinking</h3>
-<ul>
-<li>Your Research Worksheet answers should come from reading your sources, not from asking AI to summarize them for you</li>
-<li>The content on your slides (the actual historical information) should come from your research, not from a prompt</li>
-<li>Your conclusions about the community should be yours</li>
-</ul>
-<p style="margin-top:10px">The difference: AI can help you <strong>present</strong> your work. It should not <strong>do</strong> your work.</p>
+<div class="footer">
+  <span class="footer-rule"></span>
+  <span class="label">Pre-Shoah Jewish Communities Project &middot; DRS High School &middot; April 2026</span>
 </div>
 
-<div class="tip danger">
-<strong>Why this matters:</strong>
-<p>After your presentation, the teacher will ask you questions about your research. You will answer in your own words, on the spot. That is 30 of your 100 points. Students who did their own research will handle this easily. Students who had AI do the thinking for them will not.</p>
-</div>
-</div>
-
-</div>
-<div class="footer">Pre-Shoah Jewish Communities Research Project &bull; DRS High School for Boys</div>
 <script>
-function go(id,btn){
-document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
-document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-btn.classList.add('active');
-window.scrollTo({top:document.querySelector('.nav').offsetTop,behavior:'smooth'});
+function go(id, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: document.querySelector('.nav').offsetTop, behavior: 'smooth' });
 }
 </script>
 </body>
