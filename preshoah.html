@@ -180,6 +180,21 @@ a:hover{color:var(--gold)}
 .slide-spec-row .byline-g{color:var(--green);background:#e8f2e6}
 .slide-spec-row .byline-a{color:var(--accent);background:#fde8e4}
 
+/* ── CITATION EXAMPLE (mock-slide pair) ── */
+.cite-example{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.cite-slide,.cite-bib{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 1px 4px var(--shadow);position:relative}
+.cite-slide::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)}
+.cite-bib::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent)}
+.cite-slide-tag{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brown-lt);padding:14px 22px 4px}
+.cite-slide-body{padding:6px 22px 22px;font-size:.93rem;line-height:1.6;color:#3a3228;font-family:var(--serif)}
+.cite-slide-body p{font-size:.95rem}
+.cite-slide-body strong{color:var(--ink)}
+.fn{font-size:.7em;font-weight:700;color:var(--accent);vertical-align:super;margin-left:2px}
+.cite-bib-list{list-style:none;padding:0;margin:0;font-family:var(--sans);font-size:.88rem;line-height:1.6}
+.cite-bib-list li{padding-left:28px;position:relative;margin-bottom:8px;color:#3a3228}
+.cite-bib-list .fn-mark{position:absolute;left:0;top:0;font-weight:700;color:var(--accent);font-family:var(--serif)}
+@media(max-width:880px){.cite-example{grid-template-columns:1fr}}
+
 /* ── AI POLICY COLUMNS ── */
 .ai-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
 .ai-col{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:24px 26px;position:relative;box-shadow:0 1px 4px var(--shadow)}
@@ -286,7 +301,7 @@ a:hover{color:var(--gold)}
         <div class="phase-lbl">Period 2</div>
         <h4>Build &amp; Finalize</h4>
         <div class="dvd"></div>
-        <p>Finish your worksheet, combine findings, build a 10-slide deck (2 slides per person) plus bibliography, and practice your section.</p>
+        <p>Finish your worksheet, combine findings, build a 12-slide deck (title + overview + 2 per person + conclusion + bibliography), and practice your section.</p>
       </div>
     </div>
     <div class="phase p3">
@@ -352,7 +367,7 @@ a:hover{color:var(--gold)}
         <div class="kicker">Day 2 &middot; One per group</div>
         <h4>Group Slide Deck</h4>
         <div class="dvd"></div>
-        <p class="desc">Ten slides on your community &mdash; two per person, plus a group title slide and a bibliography listing every source used.</p>
+        <p class="desc">Twelve slides &mdash; title, overview, two per person, conclusion, plus a numbered bibliography. Footnotes on every slide point back to the bibliography.</p>
       </div>
       <div class="foot">Bibliography is required &mdash; uncited claims cost points.</div>
     </div>
@@ -398,7 +413,7 @@ a:hover{color:var(--gold)}
         <ul>
           <li>Finish your Research Worksheet</li>
           <li>Share findings with your group</li>
-          <li>Build your 10-slide deck (2 slides per person) plus bibliography</li>
+          <li>Build your 12-slide deck (title + overview + 2 per person + conclusion + bibliography)</li>
           <li>Visual Specialist checks consistency</li>
           <li>Practice your section</li>
         </ul>
@@ -692,21 +707,23 @@ a:hover{color:var(--gold)}
 <div id="slides" class="sec">
   <div class="sh">
     <div class="eb"><span class="eyebrow">06 &middot; Your Slides</span><span class="eb-rule"></span></div>
-    <h2>Build a 10-Slide Deck</h2>
-    <p>Two slides per person. Plus a group title slide and a required bibliography. Every student speaks for both of their slides.</p>
+    <h2>Build a 12-Slide Deck</h2>
+    <p>Title, overview, two slides per person, conclusion, and a required bibliography. Every student speaks for their two slides.</p>
   </div>
 
   <div class="slide-spec">
     <div class="slide-spec-row"><div class="n">01</div><div class="t">Title <span class="byline">Group</span></div><div class="d">Community name &middot; location &middot; group members</div></div>
-    <div class="slide-spec-row"><div class="n">02</div><div class="t">Society &amp; Culture <span class="byline byline-y">Role 1 &middot; Slide 1 of 2</span></div><div class="d">Religion, synagogues, schools, yeshivot</div></div>
-    <div class="slide-spec-row"><div class="n">03</div><div class="t">Society &amp; Culture <span class="byline byline-y">Role 1 &middot; Slide 2 of 2</span></div><div class="d">Language &middot; food &middot; cultural traditions &middot; community organizations</div></div>
-    <div class="slide-spec-row"><div class="n">04</div><div class="t">Historical Context <span class="byline byline-b">Role 2 &middot; Slide 1 of 2</span></div><div class="d">Population demographics &middot; assimilation &middot; relations with neighbors</div></div>
-    <div class="slide-spec-row"><div class="n">05</div><div class="t">Historical Context <span class="byline byline-b">Role 2 &middot; Slide 2 of 2</span></div><div class="d">Political environment &middot; economy &middot; major events &middot; migrations</div></div>
-    <div class="slide-spec-row"><div class="n">06</div><div class="t">Key Figures <span class="byline byline-g">Role 3 &middot; Slide 1 of 2</span></div><div class="d">Rabbis &amp; religious leaders</div></div>
-    <div class="slide-spec-row"><div class="n">07</div><div class="t">Key Figures <span class="byline byline-g">Role 3 &middot; Slide 2 of 2</span></div><div class="d">Scholars, writers, organizers, influential families</div></div>
-    <div class="slide-spec-row"><div class="n">08</div><div class="t">Visual &amp; Geographic <span class="byline byline-a">Role 4 &middot; Slide 1 of 2</span></div><div class="d">Map of the community &middot; geography &middot; layout of the Jewish quarter</div></div>
-    <div class="slide-spec-row"><div class="n">09</div><div class="t">Visual &amp; Geographic <span class="byline byline-a">Role 4 &middot; Slide 2 of 2</span></div><div class="d">Historical photos &middot; daily-life imagery &middot; visual story</div></div>
-    <div class="slide-spec-row bib"><div class="n">10</div><div class="t">Bibliography <span class="byline">Group</span></div><div class="d">Every source the group used &mdash; REQUIRED</div></div>
+    <div class="slide-spec-row"><div class="n">02</div><div class="t">Overview <span class="byline">Group</span></div><div class="d">Where, how large, when &mdash; population and dates at a glance</div></div>
+    <div class="slide-spec-row"><div class="n">03</div><div class="t">Society &amp; Culture <span class="byline byline-y">Role 1 &middot; Slide 1 of 2</span></div><div class="d">Religion, synagogues, schools, yeshivot</div></div>
+    <div class="slide-spec-row"><div class="n">04</div><div class="t">Society &amp; Culture <span class="byline byline-y">Role 1 &middot; Slide 2 of 2</span></div><div class="d">Language &middot; food &middot; cultural traditions &middot; community organizations</div></div>
+    <div class="slide-spec-row"><div class="n">05</div><div class="t">Historical Context <span class="byline byline-b">Role 2 &middot; Slide 1 of 2</span></div><div class="d">Population demographics &middot; assimilation &middot; relations with neighbors</div></div>
+    <div class="slide-spec-row"><div class="n">06</div><div class="t">Historical Context <span class="byline byline-b">Role 2 &middot; Slide 2 of 2</span></div><div class="d">Political environment &middot; economy &middot; major events &middot; migrations</div></div>
+    <div class="slide-spec-row"><div class="n">07</div><div class="t">Key Figures <span class="byline byline-g">Role 3 &middot; Slide 1 of 2</span></div><div class="d">Rabbis &amp; religious leaders</div></div>
+    <div class="slide-spec-row"><div class="n">08</div><div class="t">Key Figures <span class="byline byline-g">Role 3 &middot; Slide 2 of 2</span></div><div class="d">Scholars, writers, organizers, influential families</div></div>
+    <div class="slide-spec-row"><div class="n">09</div><div class="t">Visual &amp; Geographic <span class="byline byline-a">Role 4 &middot; Slide 1 of 2</span></div><div class="d">Map of the community &middot; geography &middot; layout of the Jewish quarter</div></div>
+    <div class="slide-spec-row"><div class="n">10</div><div class="t">Visual &amp; Geographic <span class="byline byline-a">Role 4 &middot; Slide 2 of 2</span></div><div class="d">Historical photos &middot; daily-life imagery &middot; visual story</div></div>
+    <div class="slide-spec-row"><div class="n">11</div><div class="t">Conclusion <span class="byline">Group</span></div><div class="d">What made this community distinctive &mdash; the one thing you want remembered</div></div>
+    <div class="slide-spec-row bib"><div class="n">12</div><div class="t">Bibliography <span class="byline">Group</span></div><div class="d">Every source the group used &mdash; REQUIRED</div></div>
   </div>
 
   <div class="card has-stripe stripe-b">
@@ -717,7 +734,57 @@ a:hover{color:var(--gold)}
       <li><strong>Don't read your slides.</strong> Slides are visual support &mdash; you speak from knowledge.</li>
       <li><strong>Consistent design.</strong> Same font, same colors, same layout. The Visual Specialist checks this.</li>
       <li><strong>At least 1 map and 1 photo.</strong> The Source Bank links to image archives.</li>
+      <li><strong>Cite every fact</strong> with a footnote number (see below).</li>
     </ul>
+  </div>
+
+  <div class="subh">
+    <div class="eb"><span class="eyebrow">Citations</span><span class="eb-rule"></span></div>
+    <h3>Cite Your Sources on Every Slide</h3>
+    <p>Footnote numbers on slides &rarr; numbered entries in the bibliography. Every fact must trace back to a source.</p>
+  </div>
+
+  <div class="card has-stripe stripe-a">
+    <h3>How Footnotes Work</h3>
+    <p>When you state a fact on a slide &mdash; a population number, a date, a quote, anything specific &mdash; put a small superscript number after it. That number matches a numbered entry on the Bibliography slide. The reader (or the teacher) can trace any claim back to its source.</p>
+    <p style="margin-top:10px;color:var(--brown-lt);font-size:.9rem"><strong>Why:</strong> Uncited claims look made-up. Cited claims look like research. The rubric rewards "information clearly drawn from credible sources" &mdash; this is how you show that.</p>
+  </div>
+
+  <div class="cite-example">
+    <div class="cite-slide">
+      <div class="cite-slide-tag">Example slide content</div>
+      <div class="cite-slide-body">
+        <p>By 1939, Vilna was home to roughly <strong>60,000 Jews</strong> &mdash; about 28% of the city's population.<sup class="fn">1</sup></p>
+        <p style="margin-top:10px">The community supported over 100 synagogues, the Strashun Library, and the YIVO Institute, founded in 1925.<sup class="fn">2</sup></p>
+        <p style="margin-top:10px">"Vilna was a city of books," wrote one observer, "where every street had a yeshiva and every yeshiva had a printing press."<sup class="fn">3</sup></p>
+      </div>
+    </div>
+    <div class="cite-bib">
+      <div class="cite-slide-tag">Slide 12: Bibliography</div>
+      <div class="cite-slide-body">
+        <ol class="cite-bib-list">
+          <li><span class="fn-mark">1.</span> YIVO Encyclopedia, "Vilnius." <em>yivoencyclopedia.org/article.aspx/Vilnius</em></li>
+          <li><span class="fn-mark">2.</span> Yad Vashem, "The Story of the Jewish Community of Vilna." <em>yadvashem.org/vilna</em></li>
+          <li><span class="fn-mark">3.</span> Lucy Dawidowicz, <em>From That Place and Time: A Memoir, 1938&ndash;1947</em>. New York: Norton, 1989, p. 54.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="card has-stripe">
+    <h3>Bibliography Format</h3>
+    <p>Number every source. Each entry should let the reader find the source themselves. Use this format:</p>
+    <ul style="margin-top:10px">
+      <li><strong>Web source:</strong> <em>Site name</em>, "Article title." URL</li>
+      <li><strong>Book:</strong> Author, <em>Book Title</em>. Publisher, year, page number(s)</li>
+      <li><strong>Encyclopedia article:</strong> <em>Encyclopedia name</em>, "Entry name." URL</li>
+    </ul>
+    <p style="margin-top:14px;font-size:.9rem;color:var(--brown-lt)"><strong>Minimum:</strong> at least 6 sources across the group (most groups have 8&ndash;12). Each role contributes their own sources to the group bibliography.</p>
+  </div>
+
+  <div class="tip warn">
+    <strong>Two common mistakes to avoid.</strong>
+    <p><strong>(1)</strong> Don't put the URL alone &mdash; include the site name and article title so the reader knows what they're looking at. <strong>(2)</strong> Don't cite the same Source Bank link twice as two different sources &mdash; if it's the same article, it's one entry.</p>
   </div>
 
   <div class="subh">
